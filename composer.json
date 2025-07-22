@@ -31,6 +31,7 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
+        "drupal/core": "^10",
         "drupal/components": "^3.0@beta",
         "drupal/emulsify_twig": "^5.0"
     }
