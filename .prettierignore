@@ -2,3 +2,30 @@ dist
 .out
 .coverage
 *.min.js
+
+# (mgudapakkam - 07/28/2025)
+# This is essentially the gatekeeper for which files Prettier watches and formats.
+# For now, I have blocked Prettier from analyzing "any and all" files.
+# Goal is to selectively loosen the criteria of which files get reviewed,
+# this way we contain the formatting and address issues in smaller chunks.
+# Overtime all of the files should and will get formatted by Prettier.
+
+# Ignore artifacts:
+build
+coverage
+
+# Ignore all HTML files:
+**/*.html
+
+# Ignore all JavaScript files:
+**/*.js
+
+# Ignore all CSS files:
+**/*.css
+
+# Ignore all SASS/SCSS files:
+**/*.scss
+!components/style.scss
+
+# Misc files (that came w/ Emulsify install) to be ignored
+package.json
