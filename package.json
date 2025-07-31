@@ -41,6 +41,7 @@
   "dependencies": {
     "add-attributes-twig-extension": "^0.1.0",
     "bem-twig-extension": "^0.1.1",
+    "foundation-sites": "^6.9.0",
     "graceful-fs": "^4.2.10",
     "js-yaml": "^4.1.0",
     "normalize.css": "^8.0.1",
