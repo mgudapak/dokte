@@ -37,6 +37,12 @@ module.exports = async ({ config }) => {
           sourceMap: true,
           sassOptions: {
             importer: globImporter(),
+            silenceDeprecations: [
+              'legacy-js-api',
+              'global-builtin',
+              'import',
+              'mixed-decls',
+            ],
           },
         },
       },
