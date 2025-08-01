@@ -1,0 +1,81 @@
+// Color variables - it is better to use the colors in
+// components/00-base/colors/_colors-used.scss rather than
+// these colors directly.
+
+// brand colors are always "300"
+// ORANGE
+$orange-100: #fffaf2;
+$orange-200: #ffdeb7;
+$orange-300: #fb9500;
+$orange-400: #d87100;
+$orange-500: #ac5504;
+$orange-600: #854420;
+$pih-orange: $orange-300;
+
+// BLUE
+$blue-100: #e0eaf9;
+$blue-200: #acc2e5;
+$blue-300: #547cb5;
+$blue-400: #1e54a0;
+$blue-500: #1c3775;
+$blue-600: #22295b;
+$pih-blue: $blue-300;
+
+// TEAL
+$teal-100: #ddf3ef;
+$teal-200: #9addd1;
+$teal-300: #00bfb2;
+$teal-400: #009b99;
+$teal-500: #0a787d;
+$teal-600: #005d68;
+$pih-teal: $teal-300;
+
+// PINK
+$pink-100: #271a1c;
+$pink-200: #fac0c8;
+$pink-300: #e35f82;
+$pink-500: #c43959;
+$pink-600: #943147;
+$pih-pink: $pink-300;
+
+// GREEN
+$green-100: #d7efdf;
+$green-200: #a2d6b3;
+$green-300: #19835c;
+$green-500: #01654d;
+$green-600: #074b43;
+$pih-green: $green-300;
+
+// RED
+$red-100: #f5d6d7;
+$red-300: #e38284;
+$red-500: #c12226;
+$red-600: #7b1317;
+
+// YELLOW
+$yellow-300: #f4be18;
+
+// GRAYSCALE
+$gray-100: #f4f4f4;
+$gray-200: #e6e6e6;
+$gray-300: #c4c4c4;
+$gray-400: #8e8e8e;
+$gray-500: #555;
+$gray-600: #3e3e3e;
+
+// NEUTRAL
+$neutral-100: #f7f3f1;
+$neutral-200: #ebe6e1;
+$neutral-300: #d0c9c3;
+$neutral-400: #b0a69e;
+$neutral-500: #948980;
+
+// BASE
+$white: #fff;
+$black: #000;
+$base-50: $white;
+$base-500: #282828;
+$base-700: black;
+
+//
+$gray-light: #e5e5e5;

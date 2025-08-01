@@ -1,0 +1,38 @@
+{% set colors_base_class = "cl-colors" %}
+
+<div {{ bem(colors_base_class) }}>
+  <div class="ds-color-categories">
+    {# High Level Color Categories #}
+    {% for key, value in categories %}
+      <div class="ds-color-category">
+        {# {% include "@atoms/text/headings/_heading.twig" with {
+          heading_level: 3,
+          heading: value.heading
+        } %} #}
+        <h3>{{ value.heading }}</h3>
+        <div class="ds-color-groups">
+          {# Color Groups w/ in categories #}
+          {% for key, color_group in value.groups %}
+            <div class="ds-color-group">
+              {% set heading = color_group.heading %}
+              {# {% include "@atoms/text/headings/_heading.twig" with {
+                heading_level: 5,
+                heading: heading|lower
+              } %} #}
+              <h5>{{ heading|lower }}</h5>
+              <div class="ds-colors">
+                {# Colors #}
+                {% for key, color in color_group.colors %}
+                  <div class="ds-color">
+                    <div class="ds-color-box" style="background-color: {{ color }};"></div>
+                    <span class="ds-color-label">{{ key }}<br>{{ color|capitalize }}</span>
+                  </div>
+                {% endfor %}
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+      {% endfor %}
+  </div>
+</div>

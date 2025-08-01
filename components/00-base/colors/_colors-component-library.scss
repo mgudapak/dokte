@@ -1,0 +1,48 @@
+@use './colors-used';
+@use '../mixins/' as mx;
+
+.ds-color-category {
+  margin-bottom: 3em;
+
+  .heading {
+    color: #029cfd;
+    margin-bottom: -1em;
+  }
+}
+
+.ds-color-group .heading {
+  @include mx.font-serif-semibold;
+  @include mx.font-size-18;
+
+  margin-bottom: 8px;
+  color: #8e8e8e;
+}
+
+.ds-colors {
+  display: flex;
+
+  .ds-color {
+    .ds-color-box {
+      width: 100px;
+      height: 100px;
+      box-sizing: border-box;
+      border-radius: 0;
+    }
+
+    &:first-child .ds-color-box {
+      border-top-left-radius: 6px;
+      border-bottom-left-radius: 6px;
+    }
+
+    &:last-child .ds-color-box {
+      border-top-right-radius: 6px;
+      border-bottom-right-radius: 6px;
+    }
+
+    .ds-color-label {
+      @include mx.font-size-12;
+
+      font-family: monospace;
+    }
+  }
+}

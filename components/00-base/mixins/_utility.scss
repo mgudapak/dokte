@@ -1,0 +1,11 @@
+/*
+ * GENERAL MIXINS
+ * (put specific ones in component files where applicable)
+*/
+
+@mixin list-reset {
+    & {
+        margin: 0;
+        padding: 0;
+    }
+}

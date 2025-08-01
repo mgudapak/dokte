@@ -1,0 +1,282 @@
+@use '../defaults/variables' as vars;
+
+// WEIGHTS
+@mixin font-weight-light {
+    font-weight: 300;
+}
+
+@mixin font-weight-regular {
+    font-weight: 400;
+}
+
+@mixin font-weight-semibold {
+    font-weight: 600;
+}
+
+@mixin font-weight-bold {
+    font-weight: 700;
+}
+
+// STYLES
+@mixin font-style-regular {
+    font-style: normal;
+}
+
+@mixin font-style-italic {
+    font-style: italic;
+}
+
+// FONT-FAMILY
+// Sans
+@mixin font-sans {
+    font-family: vars.$font-pih-sans;
+}
+
+// Sans Variations
+@mixin font-sans-light {
+    @include font-sans;
+    @include font-weight-light;
+}
+
+@mixin font-sans-light-italic {
+    @include font-sans;
+    @include font-weight-light;
+    @include font-style-italic;
+}
+
+@mixin font-sans-regular {
+    @include font-sans;
+    @include font-weight-regular;
+}
+
+@mixin font-sans-regular-italic {
+    @include font-sans;
+    @include font-weight-regular;
+    @include font-style-italic;
+}
+
+@mixin font-sans-semibold {
+    @include font-sans;
+    @include font-weight-semibold;
+}
+
+@mixin font-sans-semibold-italic {
+    @include font-sans;
+    @include font-weight-semibold;
+    @include font-style-italic;
+}
+
+@mixin font-sans-bold {
+    @include font-sans;
+    @include font-weight-bold;
+}
+
+@mixin font-sans-bold-italic {
+    @include font-sans;
+    @include font-weight-bold;
+    @include font-style-italic;
+}
+
+// Serif
+@mixin font-serif {
+    font-family: vars.$font-pih-serif;
+}
+
+// Serif Variations
+@mixin font-serif-light {
+    @include font-serif;
+    @include font-weight-light;
+}
+
+@mixin font-serif-light-italic {
+    @include font-serif;
+    @include font-weight-light;
+    @include font-style-italic;
+}
+
+@mixin font-serif-regular {
+    @include font-serif;
+    @include font-weight-regular;
+}
+
+@mixin font-serif-regular-italic {
+    @include font-serif;
+    @include font-weight-regular;
+    @include font-style-italic;
+}
+
+@mixin font-serif-semibold {
+    @include font-serif;
+    @include font-weight-semibold;
+}
+
+@mixin font-serif-semibold-italic {
+    @include font-serif;
+    @include font-weight-semibold;
+    @include font-style-italic;
+}
+
+@mixin font-serif-bold {
+    @include font-serif;
+    @include font-weight-bold;
+}
+
+@mixin font-serif-bold-italic {
+    @include font-serif;
+    @include font-weight-bold;
+    @include font-style-italic;
+}
+
+// Icons
+@mixin icon-font {
+    font-family: vars.$font-pih-icon;
+}
+
+// SIZES
+@mixin font-size-8 {
+    font-size: 0.5rem;
+}
+
+@mixin font-size-10 {
+    font-size: 0.625rem;
+}
+
+@mixin font-size-12 {
+    font-size: 0.75rem;
+}
+
+@mixin font-size-14 {
+    font-size: 0.875rem;
+}
+
+@mixin font-size-16 {
+    font-size: 1rem;
+}
+
+@mixin font-size-18 {
+    font-size: 1.125rem;
+}
+
+@mixin font-size-20 {
+    font-size: 1.25rem;
+}
+
+@mixin font-size-24 {
+    font-size: 1.5rem;
+}
+
+@mixin font-size-28 {
+    font-size: 1.75rem;
+}
+
+@mixin font-size-30 {
+    font-size: 1.875rem;
+}
+
+@mixin font-size-32 {
+    font-size: 2rem;
+}
+
+@mixin font-size-36 {
+    font-size: 2.25rem;
+}
+
+@mixin font-size-40 {
+    font-size: 2.5rem;
+}
+
+// LINE-HEIGHTS (aka leading)
+@mixin line-height-default {
+    line-height: 1.2;
+}
+
+@mixin line-height-accessible {
+    line-height: 1.5;
+}
+
+@mixin line-height-16 {
+    line-height: 16px;
+}
+
+@mixin line-height-18 {
+    line-height: 18px;
+}
+
+@mixin line-height-20 {
+    line-height: 20px;
+}
+
+@mixin line-height-22 {
+    line-height: 22px;
+}
+
+@mixin line-height-24 {
+    line-height: 24px;
+}
+
+@mixin line-height-28 {
+    line-height: 28px;
+}
+
+@mixin line-height-30 {
+    line-height: 30px;
+}
+
+@mixin line-height-32 {
+    line-height: 32px;
+}
+
+@mixin line-height-36 {
+    line-height: 32px;
+}
+
+@mixin line-height-40 {
+    line-height: 40px;
+}
+
+@mixin line-height-44 {
+    line-height: 44px;
+}
+
+@mixin line-height-48 {
+    line-height: 48px;
+}
+
+@mixin line-height-56 {
+    line-height: 56px;
+}
+
+// LETTER SPACING (aka kerning)
+@mixin letter-spacing-normal {
+    letter-spacing: normal;
+}
+
+@mixin letter-spacing-one {
+    letter-spacing: 1px;
+}
+
+@mixin letter-spacing-half {
+    letter-spacing: 0.5px;
+}
+
+@mixin letter-spacing-quarter {
+    letter-spacing: 0.25px;
+}
+
+@mixin letter-spacing-three-fourth {
+    letter-spacing: 0.75px;
+}
+
+// Code/Monospace text
+@mixin monospace-font {
+    font-family: vars.$font-pih-monospace;
+}
+
+/*
+ * PARAGRAPHS
+ *    Create a mixin for paragraph styles that can be implemented
+ *    in components with other classnames.
+*/
+@mixin paragraph($margin: 0 0 1em) {
+    margin: $margin;
+}

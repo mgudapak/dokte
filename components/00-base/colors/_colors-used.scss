@@ -1,0 +1,81 @@
+@forward 'colors-vars';
+
+@use 'colors-vars' as colors;
+
+// TODO: Consider renaming color scss files to be more intuitive!
+
+// Color Usage variables - use these (via the `clr` function below)
+// rather than color variables directly.
+
+// brand colors are always "300"
+$pih-orange: colors.$orange-300;
+$pih-blue: colors.$blue-300;
+$pih-teal: colors.$teal-300;
+$pih-pink: colors.$pink-300;
+$pih-green: colors.$green-300;
+$pih-black: colors.$base-500;
+
+// UI elements
+$headline-color: colors.$base-500;
+$body-text-color: colors.$base-500;
+$link-text-color: colors.$blue-400;
+$link-text-hover-color: colors.$blue-400;
+$link-text-visited-color: colors.$teal-500;
+$link-text-visited-hover-color: colors.$teal-500;
+
+$defaultColors: (
+  // Brand
+  pih-orange: colors.$pih-orange,
+  pih-blue: colors.$pih-blue,
+  pih-teal: colors.$pih-teal,
+  pih-pink: colors.$pih-pink,
+  pih-green: colors.$pih-green,
+
+  // UI
+  h1Text: colors.$orange-400,
+  h2Text: colors.$pih-teal,
+  h3Text: colors.$pih-blue,
+  bodyText: colors.$base-700,
+  background: colors.$base-50
+);
+
+// TODO: Come up with some system of assigning colors from `colors-vars`
+// to the ui element's/component's color attributes
+///////////
+// Usage //
+///////////
+// This color function makes it easy for you to call a color by it's functional
+// name anywhere you need.
+// E.g. to use the `text` color, you type: `color: clr(text);`
+//
+// How it works:
+// This function works in conjunction with the dynamic css custom properties
+// declarations below. The item called in the function is prefixed with
+// `var(--c-` to call the custom property for that color.
+// E.g. `color: clr(text);` will return `color: var(--c-text);`
+// Note: (The `--c-` is added via the `@each` loops below)
+@function clr($colorChoice) {
+  @return var(--c-#{$colorChoice});
+}
+
+// Create CSS custom properties
+// For each color variable above (e.g. `text` and `background`) a css custom
+// property will be created. (e.g. `--c-text:` and `--c-background:`).
+//
+// The `@each` below will create a custom property for each item in the
+// `$defaultColors` map. So put all of your default colors there.
+:root {
+  // Create custom properties for default colors
+  @each $name, $color in $defaultColors {
+    --c-#{$name}: #{$color};
+  }
+
+  // Use the default color scheme for the "Default Theme" section of the
+  // component library regardless of OS setting.
+  // This is required to show the correct colors in the component library at all times
+  [data-theme='default'] {
+    @each $name, $color in $defaultColors {
+      --c-#{$name}: #{$color};
+    }
+  }
+}

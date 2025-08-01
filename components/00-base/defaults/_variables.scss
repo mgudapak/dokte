@@ -1,0 +1,40 @@
+//
+// Brand Fonts
+//
+$font-pih-sans: 'Source Sans 3', Helvetica, Arial, Verdana, sans-serif;
+$font-pih-serif: 'Source Serif 4', Georgia, 'Times New Roman', Times, serif;
+$font-pih-icon: 'Font Awesome 6 Free'; // TODO: look into Font Awesome Pro license to lessen the download size?
+$font-pih-monospace: Consolas, 'Liberation Mono', Courier, monospace;
+
+//
+// Typography
+//
+$font-body: $font-pih-sans;
+$font-heading: $font-pih-sans;
+
+//
+// Spacing
+//
+$space: 1rem; // 16px
+
+//
+// Spacing Scales
+//
+$space-2px: calc($space * 0.125);
+$space-4px: calc($space * 0.25);
+$space-8px: calc($space * 0.5);
+$space-12px: calc($space * 0.75);
+$space-16px: calc($space);
+$space-24px: calc($space * 1.5);
+$space-32px: calc($space * 2);
+$space-40px: calc($space * 2.5);
+$space-48px: calc($space * 3);
+$space-64px: calc($space * 4);
+$space-80px: calc($space * 5);
+$space-96px: calc($space * 6);
+$space-160px: calc($space * 10);
+
+//
+// Grid - we use an 8px grid
+//
+$grid-unit: $space-8px;

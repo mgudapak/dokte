@@ -1,0 +1,129 @@
+---
+colors_heading: 'PIH Brand Color Palettes'
+categories:
+    brand:
+        heading: 'Core'
+        groups:
+            core:
+                heading: 'Brand Colors'
+                colors:
+                    pih-orange: '#fb9500'
+                    pih-blue: '#1c3775'
+                    pih-teal: '#00bfb2'
+                    pih-pink: '#ef658a'
+                    pih-green: '#064a42'
+    #
+    primary:
+        heading: 'Core Variations'
+        groups:
+            orange:
+                heading: 'Orange'
+                colors:
+                    100: '#fffaf2'
+                    200: '#ffdeb7'
+                    300: '#fb9500'
+                    400: '#d87100'
+                    500: '#ac5504'
+                    600: '#854420'
+            blue:
+                heading: 'Blue'
+                colors:
+                    100: '#e0eaf9'
+                    200: '#acc2e5'
+                    300: '#547cb5'
+                    400: '#1e54a0'
+                    500: '#1c3775'
+                    600: '#22295b'
+            teal:
+                heading: 'Teal'
+                colors:
+                    100: '#ddf3ef'
+                    200: '#9addd1'
+                    300: '#00bfb2'
+                    400: '#009b99'
+                    500: '#0a787d'
+                    600: '#005d68'
+            pink:
+                heading: 'Pink'
+                colors:
+                    100: '#ffedf0'
+                    200: '#fac0c8'
+                    300: '#ef658a'
+                    400: '#d94b6b'
+                    500: '#bc3957'
+                    600: '#8a2946'
+            green:
+                heading: 'Green'
+                colors:
+                    100: '#d7efdf'
+                    200: '#a2d6b3'
+                    300: '#3caa75'
+                    400: '#19835c'
+                    500: '#01654d'
+                    600: '#064a42'
+    #
+    secondary:
+        heading: 'Extended Palette'
+        groups:
+            red:
+                heading: 'Red'
+                colors:
+                    100: '#f5d6d7'
+                    300: '#e38284'
+                    500: '#c12226'
+                    600: '#7b1317'
+            yellow:
+                heading: 'Yellow'
+                colors:
+                    300: '#f4be18'
+            grayscale:
+                heading: 'Grayscale'
+                colors:
+                    100: '#f4f4f4'
+                    200: '#e6e6e6'
+                    300: '#c4c4c4'
+                    400: '#8e8e8e'
+                    500: '#555'
+                    600: '#3e3e3e'
+            neutral:
+                heading: 'Neutral'
+                colors:
+                    100: '#f7f3f1'
+                    200: '#ebe6e1'
+                    300: '#d0c9c3'
+                    400: '#b0a69e'
+                    500: '#948980'
+            base:
+                heading: 'Base'
+                colors:
+                    50: '#fff'
+                    500: '#282828'
+                    600: '#000'
+
+    #
+    # other:
+    #   heading: 'Other Colors'
+    #   groups:
+    #     grayscale:
+    #       heading: 'Grayscale'
+    #       colors:
+    #         100: '#f4f4f4'
+    #         200: '#e6e6e6'
+    #         300: '#c4c4c4'
+    #         400: '#8e8e8e'
+    #         500: '#555'
+    #         600: '#3e3e3e'
+    #     neutral:
+    #       heading: 'Neutral'
+    #       colors:
+    #         100: '#f7f3f1'
+    #         200: '#ebe6e1'
+    #         300: '#d0c9c3'
+    #         400: '#b0a69e'
+    #         500: '#948980'
+    #     base:
+    #       heading: 'Base'
+    #       colors:
+    #         50: '#fff'
+    #         500: '#282828'
+    #         600: '#000'

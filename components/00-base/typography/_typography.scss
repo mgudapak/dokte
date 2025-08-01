@@ -1,0 +1,7 @@
+@use '../mixins/' as mx;
+@use '../colors/colors';
+
+fieldset *,
+.form-item * {
+    @include mx.font-sans-regular;
+}
