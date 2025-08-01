@@ -8,7 +8,13 @@ module.exports = (api) => {
         corejs: 3,
       },
     ],
-    ['minify', { builtIns: false }],
+    /*
+      // mgudapakkam 7/31/25
+      // do not use 'minify' plugin namely (babel-preset-minify)
+      // it causes build to fail !
+      
+      ['minify', { builtIns: false }], 
+    */
   ];
 
   const comments = false;
