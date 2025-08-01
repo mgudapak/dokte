@@ -3,6 +3,11 @@ module.exports = {
     '../components/**/*.stories.mdx',
     '../components/**/*.stories.@(js|jsx|ts|tsx)',
   ],
+  staticDirs: [
+    '../assets/images',
+    '../assets/icons',
+    '../dist',
+  ],
   addons: [
     '@storybook/addon-a11y',
     '@storybook/addon-links',
