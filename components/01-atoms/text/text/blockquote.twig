@@ -1,0 +1,73 @@
+{#
+/**
+ * Available variables:
+ * - blockquote_base_class - the base classname
+ * - blockquote_modifiers - array of modifiers to add to the base classname
+ * - blockquote_blockname - blockname prepended to the base classname
+ * - blockquote_url - the url this blockquote should point to
+ * - blockquote_content - the content of the blockquote (typically text)
+ *
+ * Available blocks:
+ * - blockquote_content - used to replace the content of the blockquote with something other than text
+ *   for example: A formatted text field in Drupal
+ */
+#}
+{% set blockquote__base_class = blockquote__base_class|default('blockquote') %}
+{% set blockquote__modifiers = [] %}
+{% set blockquote__attributes = {
+  class: bem(blockquote__base_class, blockquote__modifiers, blockquote__blockname)
+} %}
+{% set blockquote__classes = ['quote-wrapper'] %}
+
+{% set qType = 'quote--type-' ~ quote.kind %}
+{% set blockquote__classes = blockquote__classes|merge([qType]) %}
+
+{% if quote.kind == 'inline' %}
+  {% set qColor = 'quote--color-' ~ quote.color|default('orange') %}
+  {% set blockquote__classes = blockquote__classes|merge([qColor]) %}
+{% endif %}
+
+{% set qAlign = 'quote--align-' ~ quote.align|default('left') %}
+{% set blockquote__classes = blockquote__classes|merge([qAlign]) %}
+
+{% block blockquote %}
+	<div {{ add_attributes({ 'class': blockquote__classes }) }}>
+		{% if quote.kind != 'pullquote' %}
+			<svg class="quote-symbol quote-symbol-{{ quote.color|default('orange') }} quote-symbol-align-{{ quote.align|default('left') }}" width="48"
+				height="48" viewBox="0 0 48 48" fill="none"
+				xmlns="http://www.w3.org/2000/svg">
+				<path class="outer-circle"
+					d="M48 24C48 37.2548 37.2548 48 24 48C10.7452 48 0 37.2548 0 24C0 10.7452 10.7452 0 24 0C37.2548 0 48 10.7452 48 24Z"
+					fill="#FB9500" />
+				<g clip-path="url(#clip0_9155_2817)">
+					<path
+						d="M16 22.571C16 20.2032 17.9179 18.2853 20.2857 18.2853H20.5714C21.2036 18.2853 21.7143 18.796 21.7143 19.4282C21.7143 20.0603 21.2036 20.571 20.5714 20.571H20.2857C19.1821 20.571 18.2857 21.4674 18.2857 22.571V22.8567H20.5714C21.8321 22.8567 22.8571 23.8817 22.8571 25.1424V27.4282C22.8571 28.6889 21.8321 29.7139 20.5714 29.7139H18.2857C17.025 29.7139 16 28.6889 16 27.4282V26.2853V25.1424V22.571ZM25.1429 22.571C25.1429 20.2032 27.0607 18.2853 29.4286 18.2853H29.7143C30.3464 18.2853 30.8571 18.796 30.8571 19.4282C30.8571 20.0603 30.3464 20.571 29.7143 20.571H29.4286C28.325 20.571 27.4286 21.4674 27.4286 22.571V22.8567H29.7143C30.975 22.8567 32 23.8817 32 25.1424V27.4282C32 28.6889 30.975 29.7139 29.7143 29.7139H27.4286C26.1679 29.7139 25.1429 28.6889 25.1429 27.4282V26.2853V25.1424V22.571Z"
+						fill="white" />
+				</g>
+				<defs>
+					<clipPath id="clip0_9155_2817">
+						<rect width="20" height="20" fill="white" transform="matrix(-1 0 0 -1 34 34)" />
+					</clipPath>
+				</defs>
+			</svg>
+		{% endif %}
+
+		<blockquote class="blockquote">
+			<p>&ldquo;{{ quote.content }}&rdquo;</p>
+		</blockquote>
+
+		{% if quote.kind == 'callout' %}
+			<div class="quote-separator"></div>
+		{% endif %}
+
+		{% if quote.kind != 'pullquote' %}
+			<cite class="cite">
+				<span class="author">{{ quote.cite_author }}</span><span class="title">, {{ quote.cite_title }}</span>
+			</cite>
+		{% endif %}
+	</div>
+{% endblock %}
+
+{# {% block exampleblock %}
+	<h4>Text from Example Block {{ dummyvar|default('DEFAULT')  }}</h4>
+{% endblock %} #}

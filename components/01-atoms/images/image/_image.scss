@@ -1,0 +1,95 @@
+@forward '../../../00-base/defaults/zurb-foundation-settings';
+
+@use '../../../../node_modules/foundation-sites/scss/foundation' as zf;
+@use '../../../00-base/mixins/' as mx;
+@use '../../../00-base/colors/colors' as colors;
+@use '../../../00-base/defaults/zurb-foundation-settings' as zfs;
+
+@mixin image {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+figure {
+  margin: 0; /* override normalize */
+  max-width: 368px;
+
+  @include zf.breakpoint(medium) {
+    max-width: 504px;
+  }
+  @include zf.breakpoint(large) {
+    max-width: 824px;
+  }
+  @include zf.breakpoint(xlarge) {
+    max-width: 968px;
+  }
+}
+
+.image {
+  @include image;
+
+  &-max-content-width {
+    display: block;
+    max-width: zfs.$global-width;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  &-inline {
+    max-width: 368px;
+    border-radius: 16px;
+
+    @include zf.breakpoint(medium) {
+      max-width: 504px;
+    }
+    @include zf.breakpoint(large) {
+      max-width: 824px;
+    }
+    @include zf.breakpoint(xlarge) {
+      max-width: 968px;
+    }
+  }
+
+  &-article-hero {
+    max-width: 968px;
+  }
+}
+
+.caption {
+  @include mx.font-sans-regular;
+  @include mx.font-size-14;
+  @include mx.line-height-20;
+
+  color: colors.$gray-400;
+  max-width: 768px;
+  padding: 0.5em;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include zf.breakpoint(medium) {
+    @include mx.font-size-16;
+    @include mx.line-height-24;
+
+    padding-left: 2em;
+    padding-right: 2em;
+  }
+  @include zf.breakpoint(large) {
+    @include mx.font-size-18;
+    @include mx.line-height-28;
+
+    padding-left: 3em;
+    padding-right: 3em;
+  }
+  @include zf.breakpoint(xlarge) {
+    @include mx.font-size-24;
+    @include mx.line-height-32;
+
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .attribution {
+    font-style: italic;
+  }
+}

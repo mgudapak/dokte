@@ -1,0 +1,35 @@
+@use '../../00-base/colors/colors-used' as colors;
+@use '../../00-base/defaults/variables' as vars;
+@use '../../00-base/mixins/' as mx;
+
+@mixin link {
+  @include mx.font-sans-semibold;
+
+  color: colors.$link-text-color;
+  text-decoration: underline;
+
+  &:hover {
+    color: colors.$link-text-hover-color;
+    text-decoration: none;
+  }
+
+  &:visited {
+    color: colors.$link-text-visited-color;
+  }
+}
+
+@mixin add_icon {
+  &::after {
+    content: '\f08e';
+    font-weight: bold;
+    font-family: vars.$font-pih-icon;
+  }
+}
+
+.link {
+  @include link;
+
+  &.link--icon {
+    @include add_icon;
+  }
+}

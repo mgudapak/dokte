@@ -1,0 +1,311 @@
+images:
+    full_bleed:
+        output_image_tag: true
+        image_attributes: ['image-full-bleed']
+        image_srcset: 'demo/Peru_20230616_PENSA_SAME_MMendoza_004_320w.jpg 320w, demo/Peru_20230616_PENSA_SAME_MMendoza_004_375w.jpg 375w, demo/Peru_20230616_PENSA_SAME_MMendoza_004_480w.jpg 480w, demo/Peru_20230616_PENSA_SAME_MMendoza_004_640w.jpg 640w, demo/Peru_20230616_PENSA_SAME_MMendoza_004_768w.jpg 768w, demo/Peru_20230616_PENSA_SAME_MMendoza_004_800w.jpg 800w, demo/Peru_20230616_PENSA_SAME_MMendoza_004_960w.jpg 960w, demo/Peru_20230616_PENSA_SAME_MMendoza_004_1120w.jpg 1120w, demo/Peru_20230616_PENSA_SAME_MMendoza_004_1280w.jpg 1280w, demo/Peru_20230616_PENSA_SAME_MMendoza_004_1440w.jpg 1440w, demo/Peru_20230616_PENSA_SAME_MMendoza_004_1600w.jpg 1600w, demo/Peru_20230616_PENSA_SAME_MMendoza_004_1760w.jpg 1760w, demo/Peru_20230616_PENSA_SAME_MMendoza_004_1920w.jpg 1920w, demo/Peru_20230616_PENSA_SAME_MMendoza_004_2080w.jpg 2080w, demo/Peru_20230616_PENSA_SAME_MMendoza_004_2240w.jpg 2240w, demo/Peru_20230616_PENSA_SAME_MMendoza_004_2640w.jpg 2640w'
+        image_sizes: '100vw'
+        image_href: ''
+        image_src: 'demo/Peru_20230616_PENSA_SAME_MMendoza_004.jpg'
+        image_alt: 'fullbleed - This is an image of aspect ratio 3 by 2'
+        image_title: 'PENSA SAME'
+
+    max_content_width:
+        output_image_tag: true
+        image_attributes: ['image-max-content-width']
+        image_srcset: 'demo/231725_SL_1215_PEF-xxxxxx_640w.jpg 640w, demo/231725_SL_1215_PEF-xxxxxx_2640w.jpg 2640w'
+        image_sizes: '100vw'
+        image_href: ''
+        image_src: 'demo/231725_SL_1215_PEF-xxxxxx_2640w.jpg'
+        image_alt: 'An image of size that matches the max-content width'
+        image_title: 'Max-Content Width Sample Image'
+
+    # Has captions
+    article_hero:
+        output_image_tag: true
+        image_attributes: ['image-article-hero', 'image-with-caption']
+        image_srcset: 'demo/article-hero-2-968w.jpg 968w'
+        image_sizes: '100vw'
+        image_href: ''
+        image_src: 'demo/article-hero-2-968w.jpg'
+        image_alt: 'A hero image for an Article/Blog Post'
+        image_title: 'Article Hero Sample Image'
+        image_caption: 'Pictured are Mukandayisenga Emelita and her mother, Uwimana Kncilida who live in Kabasha Village, Rwanda. She received care in the new KidsOR, where she was diagnosed with an intestinal obstruction and underwent surgery.'
+        image_attribution: 'Photo by Asher Habinshuti / Partners In Health'
+
+    inline:
+        output_image_tag: true
+        image_attributes: ['image-inline']
+        image_srcset: 'demo/inline_image_sample_368w.png 368w, demo/inline_image_sample_504w.png 504w, demo/inline_image_sample_824w.png 824w, demo/inline_image_sample_968w.png 968w'
+        image_sizes: '100vw'
+        image_href: ''
+        image_src: 'demo/231725_SL_1215_PEF-xxxxxx_2640w.jpg'
+        image_alt: 'An image that varies in size while being added inline with text.'
+        image_title: 'Inline Sample Image'
+
+    # Has captions
+    inline_captioned:
+        output_image_tag: true
+        image_attributes: ['image-inline', 'image-with-caption']
+        image_srcset: 'demo/inline_image_sample_368w.png 368w, demo/inline_image_sample_504w.png 504w, demo/inline_image_sample_824w.png 824w, demo/inline_image_sample_968w.png 968w'
+        image_sizes: '100vw'
+        image_href: ''
+        image_src: 'demo/231725_SL_1215_PEF-xxxxxx_2640w.jpg'
+        image_alt: 'An image that varies in size while being added inline with text.'
+        image_title: 'Inline Sample Image'
+        image_caption: "The expansion project increased the hospital's capacity from 150 to 237 beds and doubled the number of surgeries able to be performed."
+        image_attribution: 'Photo by Pacifique Mugemana / Partners In Health'
+
+    full_bleed_2:
+        output_image_tag: true
+        image_srcset: 'demo/231725_SL_1215_PEF-xxxxxx_640w.jpg 640w, demo/231725_SL_1215_PEF-xxxxxx_2640w.jpg 2640w'
+        image_sizes: '100vw'
+        image_href: ''
+        image_src: 'demo/231725_SL_1215_PEF-xxxxxx_2640w.jpg'
+        image_alt: 'fullbleed2 - This is an image of aspect ratio 3 by 2'
+        image_title: 'Hero Banner Sample Image'
+
+    hero_subject_centered:
+        output_image_tag: true
+        image_srcset: 'demo/231725_SL_1215_PEF-xxxxxx_640w.jpg 640w, demo/231725_SL_1215_PEF-xxxxxx_2640w.jpg 2640w'
+        image_subject_position: 'center'
+        image_sizes: '100vw'
+        image_href: ''
+        image_src: 'demo/231725_SL_1215_PEF-xxxxxx_2640w.jpg'
+        image_alt: 'This is an image where subject is centered'
+        image_title: 'Hero Banner Sample Image'
+
+    hero_subject_to_right:
+        output_image_tag: true
+        image_srcset: 'demo/SierraLeone_202308-xxxxxx-640w.jpg 640w, demo/SierraLeone_202308-xxxxxx-3240w.jpg 3240w'
+        image_subject_position: 'right'
+        image_sizes: '100vw'
+        image_href: ''
+        image_src: 'demo/SierraLeone_202308-xxxxxx-3240w.jpg'
+        image_alt: 'This is an image where subject is to the right'
+        image_title: 'Hero Banner Sample Image'
+
+    hero_subject_to_left:
+        output_image_tag: true
+        image_srcset: 'demo/242589_Haiti_1116_B-xxxxxxx-640w.jpg 640w, demo/242589_Haiti_1116_B-xxxxxxx-3240w.jpg 3240w'
+        image_subject_position: 'left'
+        image_sizes: '100vw'
+        image_href: ''
+        image_src: 'demo/242589_Haiti_1116_B-xxxxxxx-3240w.jpg'
+        image_alt: 'This is an image where subject is to the left'
+        image_title: 'Hero Banner Sample Image'
+
+    article:
+        hero:
+            output_image_tag: true
+            image_attributes:
+            image_srcset: 'demo/article-hero-1200w.png 1200w'
+            image_sizes: '100vw'
+            image_href: 'https://google.com'
+            image_src: 'demo/article-hero-1200w.png'
+            image_alt: 'An image that varies in size while being added inline with text.'
+            image_title: 'Hero image for Article page'
+            image_caption: After nearly two years, the expansion of PIH-supported Butaro Hospital has now been completed, improving care and services for the over 33,000 patients it serves each year.
+            image_attribution: Photo by Pacifique Mugemana / Partners In Health
+        embeds:
+            - output_image_tag: true
+              image_attributes:
+              image_srcset: 'demo/article-embed-1.png'
+              image_sizes: '100vw'
+              image_href: 'https://google.com'
+              image_src: 'demo/article-embed-1.png'
+              image_alt: 'An image that varies in size while being added inline with text.'
+              image_title: 'Hero image for Article page'
+              image_caption: After nearly two years, the expansion of PIH-supported Butaro Hospital has now been completed, improving care and services for the over 33,000 patients it serves each year.
+              image_attribution: Photo by Pacifique Mugemana / Partners In Health
+            - output_image_tag: true
+              image_attributes:
+              image_srcset: 'demo/article-embed-2.png'
+              image_sizes: '100vw'
+              image_href: 'https://google.com'
+              image_src: 'demo/article-embed-2.png'
+              image_alt: 'An image that varies in size while being added inline with text.'
+              image_title: 'Hero image for Article page'
+              image_caption: After nearly two years, the expansion of PIH-supported Butaro Hospital has now been completed, improving care and services for the over 33,000 patients it serves each year.
+              image_attribution: Photo by Pacifique Mugemana / Partners In Health
+            - output_image_tag: true
+              image_attributes:
+              image_srcset: 'demo/article-embed-3.png'
+              image_sizes: '100vw'
+              image_href: 'https://google.com'
+              image_src: 'demo/article-embed-3.png'
+              image_alt: 'An image that varies in size while being added inline with text.'
+              image_title: 'Hero image for Article page'
+              image_caption: After nearly two years, the expansion of PIH-supported Butaro Hospital has now been completed, improving care and services for the over 33,000 patients it serves each year.
+              image_attribution: Photo by Pacifique Mugemana / Partners In Health
+            - output_image_tag: true
+              image_attributes:
+              image_srcset: 'demo/article-embed-4.png'
+              image_sizes: '100vw'
+              image_href: 'https://google.com'
+              image_src: 'demo/article-embed-4.png'
+              image_alt: 'An image that varies in size while being added inline with text.'
+              image_title: 'Hero image for Article page'
+              image_caption: After nearly two years, the expansion of PIH-supported Butaro Hospital has now been completed, improving care and services for the over 33,000 patients it serves each year.
+              image_attribution: Photo by Pacifique Mugemana / Partners In Health
+
+    tiles:
+        single:
+            - output_image_tag: true
+              image_attributes: ['image-with-caption']
+              image_subject_position: 'center'
+              image_srcset: 'demo/article-embed-1_1200w.png 1200w'
+              image_sizes: '100vw'
+              image_href: ''
+              image_src: 'demo/article-embed-1_1200w.png'
+              image_alt: 'Alt - Sample Image ALT text'
+              image_title: 'Sample Image Title'
+              image_caption: "Sample Image's Caption"
+              image_attribution: 'Sample Image Creator'
+        double:
+            - output_image_tag: true
+              image_attributes: []
+              image_subject_position: 'center'
+              image_srcset: 'demo/article-embed-1_1200w.png 1200w'
+              image_sizes: '100vw'
+              image_href: ''
+              image_src: 'demo/article-embed-1_1200w.png'
+              image_alt: ''
+              image_title: ''
+              image_caption: "Sample Image's Caption"
+              image_attribution: ''
+            - output_image_tag: true
+              image_attributes: []
+              image_subject_position: 'center'
+              image_srcset: 'demo/article-embed-2_1200w.png 1200w'
+              image_sizes: '100vw'
+              image_href: ''
+              image_src: 'demo/article-embed-2_1200w.png'
+              image_alt: ''
+              image_title: ''
+              image_caption: "Sample Image's Caption"
+              image_attribution: ''
+        triple:
+            - output_image_tag: true
+              image_attributes: []
+              image_subject_position: 'center'
+              image_srcset: 'demo/article-embed-1_1200w.png 1200w'
+              image_sizes: '100vw'
+              image_href: ''
+              image_src: 'demo/article-embed-1_1200w.png'
+              image_alt: ''
+              image_title: ''
+              image_caption: "Sample Image's Caption"
+              image_attribution: ''
+            - output_image_tag: true
+              image_attributes: []
+              image_subject_position: 'center'
+              image_srcset: 'demo/article-embed-2_1200w.png 1200w'
+              image_sizes: '100vw'
+              image_href: ''
+              image_src: 'demo/article-embed-2_1200w.png'
+              image_alt: ''
+              image_title: ''
+              image_caption: "Sample Image's Caption"
+              image_attribution: ''
+            - output_image_tag: true
+              image_attributes: []
+              image_subject_position: 'center'
+              image_srcset: 'demo/article-embed-3_1200w.png 1200w'
+              image_sizes: '100vw'
+              image_href: ''
+              image_src: 'demo/article-embed-3_1200w.png'
+              image_alt: ''
+              image_title: ''
+              image_caption: "Sample Image's Caption"
+              image_attribution: ''
+        quadruple:
+            - output_image_tag: true
+              image_attributes: []
+              image_subject_position: 'center'
+              image_srcset: 'demo/article-embed-1_1200w.png 1200w'
+              image_sizes: '100vw'
+              image_href: ''
+              image_src: 'demo/article-embed-1_1200w.png'
+              image_alt: ''
+              image_title: ''
+              image_caption: "Sample Image's Caption"
+              image_attribution: ''
+            - output_image_tag: true
+              image_attributes: []
+              image_subject_position: 'center'
+              image_srcset: 'demo/article-embed-2_1200w.png 1200w'
+              image_sizes: '100vw'
+              image_href: ''
+              image_src: 'demo/article-embed-2_1200w.png'
+              image_alt: ''
+              image_title: ''
+              image_caption: "Sample Image's Caption"
+              image_attribution: ''
+            - output_image_tag: true
+              image_attributes: []
+              image_subject_position: 'center'
+              image_srcset: 'demo/article-embed-3_1200w.png 1200w'
+              image_sizes: '100vw'
+              image_href: ''
+              image_src: 'demo/article-embed-3_1200w.png'
+              image_alt: ''
+              image_title: ''
+              image_caption: "Sample Image's Caption"
+              image_attribution: ''
+            - output_image_tag: true
+              image_attributes: []
+              image_subject_position: 'center'
+              image_srcset: 'demo/article-embed-4_1200w.png 1200w'
+              image_sizes: '100vw'
+              image_href: ''
+              image_src: 'demo/article-embed-4_1200w.png'
+              image_alt: ''
+              image_title: ''
+              image_caption: "Sample Image's Caption"
+              image_attribution: ''
+
+    search_results:
+        - output_image_tag: true
+          image_attributes: ['result-thumbnail']
+          image_subject_position: 'center'
+          image_srcset: 'demo/article-embed-1_1200w.png 1200w'
+          image_sizes: '100vw'
+          image_href: ''
+          image_src: 'demo/article-embed-1_1200w.png'
+          image_alt: ''
+          image_title: ''
+          image_caption: "Sample Image's Caption"
+          image_attribution: ''
+        - output_image_tag: true
+          image_attributes: ['result-thumbnail']
+          image_subject_position: 'center'
+          image_srcset: 'demo/article-embed-2_1200w.png 1200w'
+          image_sizes: '100vw'
+          image_href: ''
+          image_src: 'demo/article-embed-2_1200w.png'
+          image_alt: ''
+          image_title: ''
+          image_caption: "Sample Image's Caption"
+          image_attribution: ''
+        - output_image_tag: true
+          image_attributes: ['result-thumbnail']
+          image_subject_position: 'center'
+          image_srcset: 'demo/article-embed-3_1200w.png 1200w'
+          image_sizes: '100vw'
+          image_href: ''
+          image_src: 'demo/article-embed-3_1200w.png'
+          image_alt: ''
+          image_title: ''
+          image_caption: "Sample Image's Caption"
+          image_attribution: ''
+        - output_image_tag: true
+          image_attributes: ['result-thumbnail']
+          image_subject_position: 'center'
+          image_srcset: 'demo/article-embed-4_1200w.png 1200w'
+          image_sizes: '100vw'
+          image_href: ''
+          image_src: 'demo/article-embed-4_1200w.png'
+          image_alt: ''
+          image_title: ''
+          image_caption: "Sample Image's Caption"
+          image_attribution: ''

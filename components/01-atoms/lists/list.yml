@@ -1,0 +1,18 @@
+lists:
+    unordered:
+        list_type: 'ul'
+        list_header: 'This is an unordered list where order does not matter'
+        list_items:
+            - 'Amet consectetur purus justo feugiat mattis sit ultricies odio.'
+            - 'Pellentesque pellentesque sit sed porttitor duis interdum.'
+            - 'Elementum elit est, vitae feugiat enim odio cursus.'
+            - 'Enim cum dictum gravida amet id eget.'
+            - 'Brunch raclette vexillologist post-ironic glossier ennui.'
+    ordered:
+        list_type: 'ol'
+        list_header: 'This is an ordered list where order matters'
+        list_items:
+            - 'First item in a list.'
+            - 'Second item in a list.'
+            - 'Third item in a list.'
+            - 'Fourth item in a list.'

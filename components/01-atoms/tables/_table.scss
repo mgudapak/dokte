@@ -1,0 +1,27 @@
+@use '../../00-base/mixins/' as mx;
+@use '../../00-base/colors/colors' as colors;
+
+// mostly default to Zurb Foundation styles for Tables other than these
+.table {
+    thead th,
+    thead td,
+    tfoot tr,
+    tfoot td {
+        @include mx.font-sans-bold;
+    }
+
+    tbody tr,
+    tbody td {
+        @include mx.font-sans-regular;
+    }
+}
+
+.table__row {
+  &.highlighted {
+    background-color: colors.$orange-200;
+
+    > :first-child {
+      border-left: solid 4px colors.$pih-orange;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+link_url: '#'
+link_content: 'piece of linked text'
+link_attributes:
+    'target': '_blank'
+# links:
+#   # default
+#   link:
+#     content: 'this is an inline link'
+#     url: '#'
+#     attributes:
+#       'target': '_blank'
+#     modifiers:
+#   #
+#   linkWithIcon:
+#     content: 'A standalone link'
+#     url: '#'
+#     attributes:
+#       'target': '_blank'
+#     modifiers: ['icon']

@@ -1,0 +1,76 @@
+@use '../../../../node_modules/foundation-sites/scss/foundation' as zf;
+@use '../../../00-base/mixins/' as mx;
+@use '../../../00-base/colors/colors' as colors;
+@use '../../../00-base/defaults/variables' as vars;
+
+.form-item {
+  color: clr(text);
+  margin-bottom: vars.$space;
+  max-width: 32rem;
+
+  @include zf.clearfix;
+}
+
+.form-item__label {
+  @include mx.font-size-16;
+
+  display: block;
+  color: colors.$gray-500;
+
+  @include zf.breakpoint(medium) {
+    @include mx.font-size-18;
+  }
+
+  // @include xs {
+  //   display: block;
+  //   margin-right: 2%;
+  //   padding: 0.6rem 0;
+  // }
+
+  &.form-item__label--required {
+    ::after {
+      content: '\002A';
+      color: colors.$red-300;
+    }
+  }
+}
+
+.form-item__textfield {
+  color: colors.$black;
+  border: 1px solid colors.$gray-300;
+  border-radius: 6px;
+  padding: 0.6rem;
+  max-width: 100%;
+
+  &:focus {
+    border: 1px solid colors.$blue-300;
+  }
+
+  &::placeholder {
+    color: colors.$gray-400;
+  }
+
+  &.form-item__textfield--disabled {
+    background-color: colors.$gray-100;
+  }
+
+  &.form-item__textfield--error {
+    background-color: colors.$red-100;
+    border: 1px solid colors.$red-500;
+  }
+}
+
+.form-item__description {
+  margin-top: 0.3rem;
+}
+
+.form-fieldset {
+  border: none;
+  margin-bottom: vars.$space-32px;
+  padding: 0;
+
+  .form-item {
+    margin-left: vars.$space;
+    max-width: 31rem;
+  }
+}

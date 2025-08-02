@@ -1,0 +1,34 @@
+{#
+ # Available variables:
+ # - logo__url
+ # - output_image_tag: Whether or not to output an <img> tag instead of a <picture> tag.
+ # - image_src: path to image file
+ # - image_alt: alt text on image
+#}
+
+{% set logo__base_class = logo__base_class|default('logo') %}
+
+{% set logo__attributes = {
+  class: bem(logo__base_class, logo__modifiers, logo__blockname),
+} %}
+
+{% set onlyMark = (logo__modifiers == 'only-mark') %}
+
+{% block logo_site_header %}
+  <div {{ add_attributes(logo__attributes) }}>
+    <a href="/">
+      {% block link_content %}
+        {% include "@atoms/images/image/responsive-image.twig" with {
+          output_image_tag: true,
+          image_src: onlyMark ? 'demo/pih-logo-mark.png' : 'demo/pih-logo-default.png',
+          image_alt: 'Logo',
+          responsive_image_blockname: 'logo',
+        } %}
+      {% endblock %}
+    </a>
+
+    {% if (logo__modifiers == 'with-tagline') %}
+      <span class="logo__tagline">{{ logo__tagline|default('Injustice has a Cure') }}</span>
+    {% endif %}
+  </div>
+{% endblock %}

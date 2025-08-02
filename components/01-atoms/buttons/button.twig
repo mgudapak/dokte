@@ -1,0 +1,26 @@
+{#
+/**
+ * Available variables:
+ *    label - the content of the button (typically text)
+ *    url
+ *    modifiers
+ *
+ */
+#}
+
+{% set button__base_class = button__base_class|default('button') %}
+
+{% set button__modifiers = [] %}
+{# {% set button__modifiers = size is not empty ? button__modifiers|merge([size]) %} #}
+{% set button__modifiers = (color is not empty and color != 'default') ? button__modifiers|merge([color]) %}
+
+{% set button__attributes = button__attributes|default([]) %}
+{% set button__attributes = button__attributes|merge({
+  'class': bem(button__base_class, button__modifiers, button__blockname, button__additional_classes),
+}) %}
+
+{% block button__content %}
+  <button {{ add_attributes(button__attributes) }}>
+    {{ label }}
+  </button>
+{% endblock %}

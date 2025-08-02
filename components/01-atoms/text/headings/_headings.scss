@@ -1,0 +1,447 @@
+// @use '../../../../node_modules/breakpoint-sass/stylesheets/breakpoint' as zf;
+@use '../../../../node_modules/foundation-sites/scss/foundation' as zf;
+@use '../../../00-base/defaults/zurb-foundation-settings' as zfs;
+@use '../../../00-base/mixins/' as mx;
+@use '../../../00-base/colors/colors' as colors;
+
+// @TODO: Talk to Maggie and determine the typographic "scale"
+// that she is using - see if it derives from recommended scales
+// see - https://medium.com/sketch-app-sources/exploring-responsive-type-scales-cf1da541be54 for more details
+
+// Headlines
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @include mx.font-sans-bold;
+
+  color: colors.$headline-color;
+}
+
+h1 {
+  @include mx.font-size-24;
+  @include mx.line-height-32;
+
+  text-transform: uppercase;
+
+  @include zf.breakpoint(medium) {
+    @include mx.font-size-28;
+    @include mx.line-height-40;
+  }
+
+  @include zf.breakpoint(large) {
+    @include mx.font-size-36;
+    @include mx.line-height-48;
+  }
+
+  &.heading--article-title,
+  &.article__heading {
+    text-transform: capitalize;
+
+    @include mx.font-serif-bold;
+    @include mx.font-size-24;
+    @include mx.line-height-32;
+
+    @include zf.breakpoint(medium) {
+      @include mx.font-size-28;
+      @include mx.line-height-32;
+    }
+
+    @include zf.breakpoint(large) {
+      @include mx.font-size-32;
+      @include mx.line-height-40;
+    }
+
+    @include zf.breakpoint(xlarge) {
+      @include mx.font-size-36;
+      @include mx.line-height-44;
+    }
+
+    @include zf.breakpoint(xxlarge) {
+      @include mx.font-size-40;
+      @include mx.line-height-48;
+    }
+  }
+
+  // hero styles should be handled in the hero component
+//   &.heading--hero-title {
+//     color: colors.$pih-black;
+//     margin-top: 0;
+//     margin-bottom: 0;
+
+//     @include mx.font-sans-bold;
+//     @include mx.font-size-32;
+//     @include mx.line-height-accessible;
+//     @include mx.letter-spacing-half;
+
+//     @include zf.breakpoint(medium) {
+//       @include mx.font-size-40;
+//       @include mx.line-height-default;
+
+//       margin-bottom: 1rem;
+//     }
+
+//     @include zf.breakpoint(large) {
+//       max-width: 270px;
+//     }
+
+//     @include zf.breakpoint(xlarge) {
+//       max-width: unset;
+//     }
+
+//     span {
+//       color: colors.$pih-orange;
+//     }
+//   }
+
+//   &.hero-sub-headline {
+//     color: white;
+
+//     @include zf.breakpoint(medium) {
+//       max-width: 550px;
+//     }
+
+//     @include zf.breakpoint(large) {
+//       @include mx.font-size-18;
+//       @include mx.line-height-default;
+
+//       max-width: 570px;
+//     }
+
+//     @include zf.breakpoint(xlarge) {
+//       max-width: 450px;
+//     }
+//   }
+}
+
+h2 {
+  @include mx.font-size-24;
+  @include mx.line-height-28;
+
+  color: colors.$blue-500;
+  text-transform: uppercase;
+
+  @include zf.breakpoint(medium) {
+    @include mx.font-size-28;
+    @include mx.line-height-32;
+  }
+
+  @include zf.breakpoint(large) {
+    @include mx.font-size-28;
+    @include mx.line-height-40;
+  }
+
+  @include zf.breakpoint(xlarge) {
+    @include mx.font-size-32;
+    @include mx.line-height-40;
+  }
+
+  &.heading--article-subtitle {
+    text-transform: none;
+    color: colors.$gray-500;
+    max-width: 100%;
+
+    @include mx.font-sans-regular;
+    @include mx.font-size-18;
+    @include mx.line-height-24;
+
+    @include zf.breakpoint(medium) {
+      @include mx.font-size-20;
+      @include mx.line-height-28;
+    }
+
+    @include zf.breakpoint(large) {
+      @include mx.font-size-24;
+      @include mx.line-height-32;
+    }
+
+    @include zf.breakpoint(xlarge) {
+      @include mx.font-size-32;
+      @include mx.line-height-40;
+    }
+  }
+
+  &.heading--section-title {
+    text-transform: uppercase;
+    color: colors.$blue-500;
+    max-width: 100%;
+
+    @include mx.font-sans-bold;
+    @include mx.font-size-24;
+    @include mx.line-height-28;
+
+    @include zf.breakpoint(medium) {
+      @include mx.font-size-28;
+      @include mx.line-height-32;
+    }
+    @include zf.breakpoint(large) {
+      @include mx.font-size-32;
+      @include mx.line-height-40;
+    }
+  }
+
+  &.article__section-heading {
+    color: colors.$pih-black;
+    text-transform: uppercase;
+
+    @include zf.breakpoint(medium) {
+      @include mx.font-size-28;
+      @include mx.line-height-32;
+    }
+
+    @include zf.breakpoint(large) {
+      @include mx.font-size-32;
+      @include mx.line-height-40;
+    }
+  }
+}
+
+h3,
+.heading--section-subtitle {
+  @include mx.font-size-20;
+  @include mx.line-height-24;
+
+  color: colors.$pih-black;
+  text-transform: capitalize;
+
+  @include zf.breakpoint(medium) {
+    @include mx.font-size-24;
+    @include mx.line-height-32;
+  }
+
+  @include zf.breakpoint(large) {
+    @include mx.font-size-28;
+    @include mx.line-height-32;
+  }
+}
+
+h4,
+.heading--subsection-title {
+  @include mx.font-size-18;
+  @include mx.line-height-20;
+
+  color: colors.$pih-black;
+  text-transform: capitalize;
+
+  @include zf.breakpoint(medium) {
+    @include mx.font-size-20;
+    @include mx.line-height-24;
+  }
+
+  @include zf.breakpoint(large) {
+    @include mx.font-size-24;
+    @include mx.line-height-32;
+  }
+}
+
+h5,
+.heading--subsection-subtitle {
+  @include mx.font-size-16;
+  @include mx.line-height-24;
+
+  color: colors.$pih-black;
+  text-transform: capitalize;
+
+  @include zf.breakpoint(medium) {
+    @include mx.font-size-18;
+    @include mx.line-height-24;
+  }
+
+  @include zf.breakpoint(large) {
+    @include mx.font-size-20;
+    @include mx.line-height-32;
+  }
+}
+
+/* COMMENTED OUT FOR NOW
+  $color-heading: clr(accent);
+
+  @mixin heading-xl(
+    $font-family: $font-heading,
+    $font-size: 2rem,
+    $line-height: 1.4,
+    $color: colors.$color-heading,
+    $color-link: inherit,
+    $color-link-hover: inherit,
+    $font-weight: 700,
+    $margin: 0 0 $space-4px
+  ) {
+    color: colors.$color;
+    font-family: $font-family;
+    font-weight: $font-weight;
+    font-style: normal;
+    font-size: $font-size;
+    line-height: $line-height;
+    margin: $margin;
+    width: auto;
+
+    &__link {
+      color: colors.$color-link;
+
+      &:hover {
+        color: colors.$color-link-hover;
+      }
+    }
+  }
+
+  @mixin heading-large(
+    $font-family: $font-heading,
+    $font-size: 1.8rem,
+    $line-height: 1.4,
+    $color: colors.$color-heading,
+    $color-link: inherit,
+    $color-link-hover: inherit,
+    $font-weight: 700,
+    $margin: 0 0 $space-4px
+  ) {
+    color: colors.$color;
+    font-family: $font-family;
+    font-weight: $font-weight;
+    font-style: normal;
+    font-size: $font-size;
+    line-height: $line-height;
+    margin: $margin;
+    width: auto;
+
+    &__link {
+      color: colors.$color-link;
+
+      &:hover {
+        color: colors.$color-link-hover;
+      }
+    }
+  }
+
+  @mixin heading-medium(
+    $font-family: $font-heading,
+    $font-size: 1.4rem,
+    $line-height: 1.6,
+    $color: colors.$color-heading,
+    $color-link: inherit,
+    $color-link-hover: inherit,
+    $font-weight: 700,
+    $margin: 0 0 $space-4px
+  ) {
+    color: colors.$color;
+    font-family: $font-family;
+    font-weight: $font-weight;
+    font-style: normal;
+    font-size: $font-size;
+    line-height: $line-height;
+    margin: $margin;
+    width: auto;
+
+    &__link {
+      color: colors.$color-link;
+
+      &:hover {
+        color: colors.$color-link-hover;
+      }
+    }
+  }
+
+  @mixin heading-small(
+    $font-family: $font-heading,
+    $font-size: 1.2rem,
+    $line-height: 1.6,
+    $color: colors.$color-heading,
+    $color-link: inherit,
+    $color-link-hover: inherit,
+    $font-weight: 600,
+    $margin: 0 0 $space-4px
+  ) {
+    color: colors.$color;
+    font-family: $font-family;
+    font-weight: $font-weight;
+    font-style: normal;
+    font-size: $font-size;
+    line-height: $line-height;
+    margin: $margin;
+    width: auto;
+
+    &__link {
+      color: colors.$color-link;
+
+      &:hover {
+        color: colors.$color-link-hover;
+      }
+    }
+  }
+
+  @mixin heading-xs(
+    $font-family: $font-heading,
+    $font-size: 1.1rem,
+    $line-height: 2,
+    $color: colors.$color-heading,
+    $color-link: inherit,
+    $color-link-hover: inherit,
+    $font-weight: 600,
+    $margin: 0 0 $space-4px
+  ) {
+    color: colors.$color;
+    font-family: $font-family;
+    font-weight: $font-weight;
+    font-style: normal;
+    font-size: $font-size;
+    line-height: $line-height;
+    margin: $margin;
+    width: auto;
+
+    &__link {
+      color: colors.$color-link;
+
+      &:hover {
+        color: colors.$color-link-hover;
+      }
+    }
+  }
+
+  .h1 {
+    @include heading-xl;
+  }
+
+  .h2 {
+    @include heading-large;
+  }
+
+  .h3 {
+    @include heading-medium;
+  }
+
+  .h4 {
+    @include heading-small;
+  }
+
+  .h5,
+  .h6 {
+    @include heading-xs;
+  }
+
+  .text-long {
+    h1 {
+      @extend .h1;
+    }
+
+    h2 {
+      @extend .h2;
+    }
+
+    h3 {
+      @extend .h3;
+    }
+
+    h4 {
+      @extend .h4;
+    }
+
+    h5 {
+      @extend .h5;
+    }
+
+    h6 {
+      @extend .h6;
+    }
+  }
+*/

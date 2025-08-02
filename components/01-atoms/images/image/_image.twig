@@ -1,0 +1,50 @@
+{% set image_base_class = image_base_class|default('image') %}
+{% set image_additional_classes = image_attributes %}
+{# {% set image_has_caption = ('image-with-caption' in image_additional_classes) %} #}
+
+
+{# {% if image_has_caption %} #}
+{% if image_caption %}
+  {# enclose image in figure tag so we can add (fig)caption #}
+  <figure {{ bem(image_base_class, image_modifiers, image_blockname, image_additional_classes) }}>
+{% endif %}
+
+  {% if image_href %}
+    <a {{ bem(image_link_base_class, image_link_modifiers, image_link_blockname|default(image_figure_base_class)) }}
+      href="{{ image_href }}">
+  {% endif %}
+
+    <img
+      {{ bem(image_base_class, image_modifiers, image_blockname, image_additional_classes) }}
+
+      {% if image_srcset %}
+        srcset="{{ image_srcset }}"
+      {% endif %}
+
+      {% if image_sizes %}
+        sizes="{{ image_sizes }}"
+      {% endif %}
+
+      src="{{ image_src }}"
+
+      alt="{{ image_alt }}"
+
+      {% if image_title %}
+        title="{{ image_title }}"
+      {% endif %}
+    />
+
+  {% if image_href %}
+    </a>
+  {% endif %}
+
+{# {% if image_has_caption %} #}
+{% if image_caption %}
+  {% set caption = image_caption %}
+
+  <figcaption class="caption {{ image_modifiers }}">
+    {{ caption }} <span class="attribution">{{ image_attribution }}</span>
+  </figcaption>
+
+  </figure>
+{% endif %}

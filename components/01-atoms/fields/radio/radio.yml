@@ -1,0 +1,8 @@
+label: Choose your preferred contact method
+options:
+    - title: 'Phone'
+      checked: 'checked'
+    - title: 'Email'
+    - title: 'Text'
+    - title: 'Slack'
+    - title: 'WhatsApp'

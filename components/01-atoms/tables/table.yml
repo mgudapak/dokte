@@ -1,0 +1,53 @@
+caption: 'Table of Interesting Data'
+header:
+    - tag: th
+      content: Heading column 1
+    - tag: th
+      content: Heading column 2
+    - tag: th
+      content: Heading column 3
+      attributes: { data-cell-highlight: '' }
+    - tag: th
+      content: Heading column 4
+rows:
+    - cells:
+          - tag: td
+            content: <p>Massa erat, eu tempus magna. Cras tincidunt nulla, at auctor felis pretium. Nam dignissim fringilla egestas.</p>
+          - tag: td
+            content: CHECK
+          - tag: td
+            content: CHECK
+            attributes: { data-cell-highlight: '' }
+          - tag: td
+            content: CHECK
+    - attributes: ['highlighted']
+      cells:
+          - tag: td
+            content: <p>I am a highlighted row so you can pay attention to this row of content out of all the others.</p>
+          - tag: td
+            content: Limited
+          - tag: td
+            content: Limited
+            attributes: { data-cell-highlight: '' }
+          - tag: td
+            content: CHECK
+    - cells:
+          - tag: td
+            content: <p>Pellentesque habitant morbi tristique senectus paecenas tincidunt orci non erat congue bibendum.</p>
+          - tag: td
+            content: Limited
+          - tag: td
+            content: NOCHECK
+            attributes: { data-cell-highlight: '' }
+          - tag: td
+            content: NOCHECK
+footer:
+    - tag: td
+      content: Footer item 1
+    - tag: td
+      content: Footer item 2
+    - tag: td
+      content: Footer item 3
+      attributes: { data-cell-highlight: '' }
+    - tag: td
+      content: Footer item 4

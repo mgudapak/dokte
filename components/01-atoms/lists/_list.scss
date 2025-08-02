@@ -1,0 +1,37 @@
+@use '../../00-base/defaults/variables' as vars;
+@use '../../00-base/mixins/' as mx;
+
+ul,
+ol,
+dl {
+    @include mx.font-sans-regular;
+
+    li,
+    dt {
+        font-family: inherit;
+    }
+}
+
+ul {
+  @include mx.list-reset;
+
+  list-style-type: disc;
+  margin-left: 1em;
+}
+
+ol {
+  @include mx.list-reset;
+
+  list-style-type: decimal;
+  margin-left: 1em;
+}
+
+.text-field {
+  li {
+    padding-left: vars.$space;
+  }
+}
+
+.dl-term {
+  font-weight: bold;
+}

@@ -1,0 +1,13 @@
+{% set responsive_image_base_class = responsive_image_base_class|default('image') %}
+
+{% include "@atoms/images/image/_image.twig" with {
+  image_base_class: responsive_image_base_class,
+  image_attributes: image_attributes|default([]),
+  image_modifiers: responsive_image_modifiers,
+  image_blockname: responsive_image_blockname,
+  image_srcset: image_srcset|default(img_element['#attributes'].srcset),
+  image_sizes: image_sizes|default(img_element['#attributes'].sizes),
+  image_src: image_src|default(img_element['#uri']),
+  image_alt: image_alt|default(img_element['#alt']),
+  image_title: image_title|default(img_element['#title']),
+} %}

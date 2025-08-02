@@ -1,0 +1,18 @@
+@use '../../../00-base/mixins/' as mx;
+
+.form-item--checkbox {
+  border: none;
+}
+
+.form-item--checkboxes,
+.form-item--checkbox__item {
+  @include mx.list-reset;
+}
+
+.form-item--checkboxes {
+  margin-left: 1rem;
+}
+
+.form-item--checkbox__item input {
+  margin-right: 0.5rem;
+}

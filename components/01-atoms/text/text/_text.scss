@@ -1,0 +1,59 @@
+@use '../../../../node_modules/foundation-sites/scss/foundation' as zf;
+@use '../../../00-base/mixins/' as mx;
+@use '../../../00-base/colors/colors' as colors;
+
+
+.paragraph {
+  @include mx.paragraph;
+}
+
+p {
+  @include mx.font-sans-regular;
+  @include mx.font-size-16;
+  @include mx.line-height-24;
+  @include mx.paragraph;
+
+  color: colors.$body-text-color;
+  max-width: 700px; // for readability
+
+  @include zf.breakpoint(large) {
+    @include mx.font-size-18;
+    @include mx.line-height-24;
+  }
+  @include zf.breakpoint(xlarge) {
+    @include mx.font-size-20;
+    @include mx.line-height-28;
+  }
+}
+
+/*
+ * HORIZONTAL RULE
+ *    A thematic break applied between paragraph-level elements
+ *
+*/
+.hr {
+  border-style: solid;
+  border-width: 1px 0 0;
+  color: currentColor;
+}
+
+/* @TODO: BEM selectors should be applied to wysiwyg-created content */
+
+.text-long {
+  p {
+    @extend .paragraph;
+  }
+
+  // blockquote {
+  //   @extend .quote;
+  // }
+
+  hr {
+    @extend .hr;
+  }
+}
+
+pre {
+  margin: 0;
+  background-color: var(--c-background-section);
+}

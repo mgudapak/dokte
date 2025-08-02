@@ -1,0 +1,48 @@
+headings:
+    # - level: 1
+    #   content: H1 - Hero Title (Injustice Has a <span>Cure</span>)
+    #   modifiers: ['hero-title']
+    #   status: DONE
+    - level: 1
+      # content: Things to Know About Marburg Virus Disease
+      content: This is an H1 - Article/Blog Post Title
+      modifiers: ['article-title']
+      status: DONE
+    # - level: 1
+    #   content: This is an example of a H1 heading
+    #   modifiers: ['page-title']
+    - level: 2
+      content: An H2 - Article SubTitle
+      modifiers: ['article-subtitle']
+      status: DONE
+    - level: 2
+      content: An H2 - Section Title
+      modifiers: ['section-title']
+      status: DONE
+    - level: 3
+      content: An H3 - Section SubTitle
+      modifiers: ['section-subtitle']
+      status: DONE
+    - level: 4
+      content: An H4 - Subsection Title
+      modifiers: ['subsection-title']
+      status:
+    - level: 5
+      content: An H5 - Subsection SubTitle
+      modifiers: ['subsection-subtitle']
+      status:
+text_styles:
+    - content: Injustice has a Cure
+      modifiers: ['hero_heading']
+      use_case: Lead title on a Hero banner
+      status:
+    - content: Empowering Women, Girls to Choose Their Reproductive Futures
+      modifiers: ['article_heading']
+      use_case: Lead title on a Article/Blog page
+      status:
+# - content:
+#   modifiers:
+#   use_case:
+# - content:
+#   modifiers:
+#   use_case:

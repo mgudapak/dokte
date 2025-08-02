@@ -1,0 +1,9 @@
+
+
+{# {% set link_base_class = link_base_class|default('link') %} #}
+
+<p>In a sea of text, lies a humble
+  {% include "@atoms/links/_link.twig" with {
+    linkData: linkData,
+  } %}
+  which when clicked upon takes you to a magical land of another web page.</p>

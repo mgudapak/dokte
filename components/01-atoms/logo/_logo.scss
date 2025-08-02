@@ -1,0 +1,38 @@
+@use '../../00-base/typography/typography';
+@use '../../00-base/mixins/' as mx;
+@use '../../00-base/colors/colors-used' as colors;
+
+.logo {
+  width: 100%;
+  max-width: auto;
+  display: flex;
+  align-items: center;
+
+  .logo__image {
+    height: 48px;
+  }
+
+  &:has(.logo__tagline) {
+    .logo__image {
+      padding-right: 1rem;
+      border-right: solid 1px rgba(170 170 170 / 75%);
+    }
+  }
+
+  .logo__tagline {
+    @include mx.font-sans-semibold;
+    @include mx.font-size-18;
+    @include mx.font-style-italic;
+
+    color: colors.$pih-black;
+    padding-left: 1rem;
+  }
+}
+
+.logo--header {
+  max-width: 20rem;
+}
+
+.logo--footer {
+  max-width: 10rem;
+}

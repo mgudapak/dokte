@@ -1,0 +1,18 @@
+@use '../../../00-base/mixins/' as mx;
+
+.form-item--radio {
+  border: none;
+}
+
+.form-item--radios,
+.form-item--radio__item {
+  @include mx.list-reset;
+}
+
+.form-item--radios {
+  margin-left: 1rem;
+}
+
+.form-item--radio__item input {
+  margin-right: 0.5rem;
+}

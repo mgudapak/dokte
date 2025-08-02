@@ -1,0 +1,22 @@
+quotes:
+    callout:
+        kind: 'callout'
+        align: 'center'
+        color: ''
+        content: "For me, an area of moral clarity is: you're in front of someone who's suffering and you have the tools at your disposal to alleviate that suffering or even eradicate it, and you act."
+        cite_author: 'Dr. Paul Farmer'
+        cite_title: 'Late Co-Founder and Chief Strategist of Partners In Health'
+    inline:
+        kind: 'inline'
+        align: 'left'
+        color: 'orange'
+        content: "So, if nearly a million deaths since the start of the pandemic isn't enough to generate political resolve and the federal dollars never appear, where does that leave us?"
+        cite_author: 'Katie Bollbach'
+        cite_title: 'Executive Director of Partners In Health - US'
+    pullquote:
+        kind: 'pullquote'
+        align: 'left'
+        color: 'gray'
+        content: 'Every day, more than 800 women die from complications related to pregnancy and childbirth, with most of those deaths entirely preventable.'
+        cite_author: ''
+        cite_title: ''

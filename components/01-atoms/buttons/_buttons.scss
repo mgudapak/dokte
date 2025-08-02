@@ -1,0 +1,114 @@
+@use '../../00-base/colors/colors-vars' as colors;
+@use '../../00-base/mixins/' as mx;
+@use '../../00-base/defaults/breakpoints' as br;
+@use '../../00-base/defaults/zurb-foundation-settings' as zfs;
+
+// Sass map to define colors.
+$button-colors: (
+    default: (text: colors.$orange-400,
+        bg: colors.$base-50,
+        border: colors.$orange-400,
+        text-hover: colors.$orange-500,
+        bg-hover: colors.$orange-100,
+        border-hover: colors.$orange-100,
+    ),
+    orange: (text: colors.$base-50,
+        bg: colors.$orange-400,
+        border: colors.$orange-400,
+        text-hover: colors.$base-50,
+        bg-hover: colors.$orange-500,
+        border-hover: colors.$orange-500,
+    ),
+    blue: (text: colors.$base-50,
+        bg: colors.$blue-500,
+        border: colors.$blue-500,
+        text-hover: colors.$base-50,
+        bg-hover: colors.$blue-600,
+        border-hover: colors.$blue-600,
+    ),
+    teal: (text: colors.$base-50,
+        bg: colors.$teal-300,
+        border: colors.$teal-300,
+        text-hover: colors.$base-50,
+        bg-hover: colors.$teal-500,
+        border-hover: colors.$teal-500,
+    ),
+    gray: (text: colors.$base-50,
+        bg: colors.$gray-500,
+        border: colors.$gray-500,
+        text-hover: colors.$base-50,
+        bg-hover: colors.$gray-600,
+        border-hover: colors.$gray-600,
+    ),
+);
+
+// Mixin to define colors for one or more schemes.
+// Simply pass the color scheme to the mixin to get the colors defined in the map.
+// e.g. @include buttonColors(default) will get all of the colors defined in the "default" section.
+@mixin buttonColors($scheme,
+    $pallate: map-get($button-colors, $scheme),
+    $map: $button-colors) {
+    color: map-get($pallate, text);
+    background-color: map-get($pallate, bg);
+    border: solid 2px map-get($pallate, border);
+
+    &:hover {
+        color: map-get($pallate, text-hover);
+        background-color: map-get($pallate, bg-hover);
+        border: solid 2px map-get($pallate, border-hover);
+    }
+}
+
+// The button-base mixin contains styles that apply to all buttons
+// regardless of color or size.
+@mixin button-base {
+    @include mx.font-sans-semibold;
+    @include mx.font-size-14;
+    @include mx.line-height-20;
+    @include mx.letter-spacing-half;
+
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+    text-transform: capitalize;
+    user-select: none;
+    padding: 4px 12px;
+    border-radius: 6px;
+    min-width: 174px;
+
+    @include br.medium {
+        @include mx.font-size-16;
+        @include mx.line-height-22;
+
+        padding: 8px 16px;
+    }
+
+    @include br.large {
+        @include mx.font-size-18;
+        @include mx.line-height-24;
+
+        padding: 8px 24px;
+    }
+}
+
+.button {
+    @include button-base;
+    @include buttonColors(default);
+
+    &--orange {
+        @include buttonColors(orange);
+    }
+
+    &--blue {
+        @include buttonColors(blue);
+    }
+
+    &--teal {
+        @include buttonColors(teal);
+    }
+
+    &--gray {
+        @include buttonColors(gray);
+    }
+}

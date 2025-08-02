@@ -1,0 +1,216 @@
+@use '../../../../node_modules/foundation-sites/scss/foundation' as zf;
+@use '../../../00-base/mixins/' as mx;
+@use '../../../00-base/colors/colors' as colors;
+
+// some user-agent resets
+blockquote {
+  margin-block: 0;
+  margin-inline: 0;
+}
+
+.quote-wrapper {
+  display: flex;
+  flex-flow: column wrap;
+  transition: all 1s;
+  max-width: 500px;
+  margin: 40px 0;
+
+  @include zf.breakpoint(medium) {
+    max-width: 600px;
+  }
+  @include zf.breakpoint(large) {
+    max-width: 800px;
+  }
+  @include zf.breakpoint(xlarge) {
+    max-width: 968px;
+    margin: 56px 0;
+  }
+
+  .quote-symbol {
+    margin-bottom: 16px;
+    width: 32px;
+    height: 32px;
+
+    @include zf.breakpoint(large) {
+      width: 40px;
+      height: 40px;
+    }
+    @include zf.breakpoint(xlarge) {
+      width: 48px;
+      height: 32px;
+    }
+
+    &-orange {
+      .outer-circle {
+        fill: colors.$orange-300;
+      }
+    }
+
+    &-blue {
+      .outer-circle {
+        fill: colors.$blue-500;
+      }
+    }
+
+    &-teal {
+      .outer-circle {
+        fill: colors.$teal-300;
+      }
+    }
+
+    &-align-center {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    &-align-left {
+      margin-left: unset;
+      margin-right: unset;
+    }
+  }
+
+  .quote-separator {
+    width: 12px;
+    height: 1px;
+    background-color: colors.$pih-black;
+  }
+
+  .blockquote p {
+    // reset user-agent defaults
+    margin-block: 0;
+    margin-inline: 0;
+
+    @include mx.font-serif-regular;
+    @include mx.font-size-16;
+    @include mx.line-height-24;
+
+    color: colors.$pih-black;
+    max-width: inherit;
+
+    @include zf.breakpoint(medium) {
+      @include mx.font-size-18;
+      @include mx.line-height-24;
+    }
+
+    @include zf.breakpoint(large) {
+      @include mx.font-size-20;
+      @include mx.line-height-28;
+    }
+
+    @include zf.breakpoint(xlarge) {
+      @include mx.font-size-24;
+      @include mx.line-height-32;
+    }
+  }
+
+  .cite {
+    @include mx.font-sans-regular-italic;
+    @include mx.font-size-16;
+    @include mx.line-height-24;
+
+    color: colors.$pih-black;
+
+    span {
+      &.author {
+        @include mx.font-sans-semibold;
+        @include mx.font-style-regular;
+        @include mx.font-size-16;
+        @include mx.line-height-24;
+      }
+    }
+  }
+
+  &.quote--type-inline,
+  &.quote--type-pullquote {
+    border-radius: 8px;
+    padding: 24px 32px;
+    border-left-width: 6px;
+    border-left-style: solid;
+    box-shadow: 0 0 8px 0 rgba(0 0 0 / 20%);
+
+    &.quote--color {
+      &-orange {
+        background-color: colors.$orange-100;
+        border-left-color: colors.$orange-300;
+      }
+
+      &-blue {
+        background-color: colors.$gray-100;
+        border-left-color: colors.$blue-500;
+      }
+
+      &-teal {
+        background-color: colors.$white;
+        border-left-color: colors.$teal-300;
+      }
+
+      &-gray {
+        background-color: colors.$white;
+        border-left-color: colors.$neutral-500;
+      }
+    }
+  }
+
+  &.quote--type-inline {
+    .cite {
+      .author {
+        @include mx.font-sans-regular-italic;
+      }
+
+      .title {
+        display: none;
+      }
+    }
+  }
+
+  &.quote--type-pullquote {
+    @include mx.font-serif-regular;
+    @include mx.font-style-italic;
+
+    background-color: colors.$white;
+    border-left-color: colors.$neutral-500;
+
+    .cite {
+      display: none;
+    }
+  }
+
+  &.quote--align-left {
+    justify-content: left;
+
+    .quote-separator {
+      display: none;
+    }
+
+    .blockquote {
+      text-align: left;
+    }
+
+    .cite {
+      text-align: left;
+      margin-top: 16px;
+
+      &::before {
+        content: '\2014';
+      }
+    }
+  }
+
+  &.quote--align-center {
+    justify-content: center;
+
+    .quote-separator {
+      margin: 10px auto;
+
+      @include zf.breakpoint(medium) {
+        margin-top: 16px;
+        margin-bottom: 16px;
+      }
+    }
+
+    .blockquote,
+    .cite {
+      text-align: center;
+    }
+  }
+}

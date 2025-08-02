@@ -1,0 +1,9 @@
+label: Choose from these areas of focus
+options:
+    - title: 'Child Health'
+      checked: 'checked'
+    - title: 'Maternal Health'
+    - title: 'HIV/Aids'
+    # - title: 'Mental Health'
+    - title: 'Tuberculosis'
+    - title: 'Cancer Treatment'
