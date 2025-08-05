@@ -22,3 +22,7 @@ vendor
 
 # Jest
 .coverage
+
+# demo assets
+assets/images/demo/**/*
+!assets/images/demo/.gitkeep
