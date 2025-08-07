@@ -1,0 +1,25 @@
+{#
+ # Slick carousel is the JS library that offers the carousel feature.
+ # For this specific component, we do NOT need to use the Foundation
+ # sizing classes (like small, medium, large) to position the items
+ # within the carousel.
+#}
+
+{#
+  this is necessary only when you integrate it within in a Drupal template
+  {{ attach_library('emulsify/carousel') }}
+#}
+
+{% set base__class = 'collection collection-carousel collection-carousel-stats' %}
+{% set modifiers = card__data['card__modifiers']|join(' ') %}
+{# class='{{ base__class ~ modifiers }}' #}
+
+<div id="stat-carousel" class="carousel grid-x grid-padding-x">
+  {% for stat in stats %}
+    <div class="carousel-item cell small-12 large-4">
+      {% include "@molecules/card/card.twig" with {
+        card__data: stat
+      } %}
+    </div>
+  {% endfor %}
+</div>

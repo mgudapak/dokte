@@ -1,0 +1,9 @@
+@use '../../../00-base/colors/colors-used.scss';
+
+.collection-grid-cards {
+  .card {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 32px;
+  }
+}

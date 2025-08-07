@@ -1,0 +1,17 @@
+{% set base__class = 'collection collection-grid-cards' %}
+{% set modifiers = card__data['card__modifiers']|join(' ') %}
+{% set gridSize = cards.length %}
+
+{# @TODO: implement dynamic cell sizes based on gridSize #}
+
+<div class="{{ base__class ~ modifiers }} grid-x grid-margin-x grid-container">
+
+  {% for card in cards %}
+    <div class="cell large-4">
+      {% include "@molecules/card/card.twig" with {
+        card__data: card
+      } %}
+    </div>
+  {% endfor %}
+
+</div>

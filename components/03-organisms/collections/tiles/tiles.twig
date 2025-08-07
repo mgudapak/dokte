@@ -1,0 +1,57 @@
+{% set collectionSize = images|length %}
+{% set base__class = [
+    'collection',
+    'collection-tiles',
+    'collection-tiles-images',
+    'collection-size' ~ '-' ~ collectionSize
+  ]
+%}
+{% set cumulatedCaption = '' %}
+{# {% set modifiers = card__data['card__modifiers']|join(' ') %} #}
+
+<div class="{{ base__class|join(' ') }} grid-x">
+
+  {% for image in images %}
+
+    {% if collectionSize == 1 %}
+      {% set column_size = 'small-12' %}
+
+    {% elseif collectionSize == 2 %}
+      {% set column_size = 'small-12 medium-12 large-6' %}
+
+    {% elseif collectionSize == 3 %}
+      {% if loop.first %}
+        {% set column_size = 'small-12 medium-12' %}
+      {% else %}
+        {% set column_size = 'small-12 medium-6' %}
+      {% endif %}
+
+    {% else %}
+      {% if loop.index0 == 0 %}
+        {% set column_size = 'small-6 xlarge-12' %}
+      {% else %}
+        {% set column_size = 'small-6 xlarge-4' %}
+      {% endif %}
+
+    {% endif %}
+
+    <div class="cell {{ column_size }}">
+      {% include "@atoms/images/image/responsive-image.twig" with {
+        image_srcset: image.image_srcset,
+        image_sizes: image.image_sizes,
+        image_src: image.image_src,
+        image_alt: image.image_alt,
+        image_title: image.image_title,
+      } %}
+    </div>
+
+    {% set formattedCaption = loop.index ~ '. ' ~ image.image_caption ~ ' ' ~ image_attribution ~ ' ' %}
+    {% set cumulatedCaption = cumulatedCaption ~ formattedCaption %}
+
+  {% endfor %}
+
+</div>
+
+<div class="collection-tiles-images-captions">
+  <p class="caption">{{ cumulatedCaption }}</p>
+</div>

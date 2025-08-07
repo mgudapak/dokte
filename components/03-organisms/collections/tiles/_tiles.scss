@@ -1,0 +1,174 @@
+@use '../../../../node_modules/foundation-sites/scss/foundation' as zf;
+@use '../../../00-base/defaults/zurb-foundation-settings' as zfs;
+
+.collection-tiles-images {
+  transition: all 1s;
+  max-width: 968px;
+
+  img {
+    border-radius: 8px;
+  }
+
+  /* stylelint-disable no-descending-specificity */
+  &.collection-size-2 {
+    .cell {
+      &:first-child {
+        padding: 0 0 4px;
+
+        img {
+          border-radius: 8px 8px 0 0;
+        }
+      }
+
+      &:last-child {
+        padding: 4px 0 0;
+
+        img {
+          border-radius: 0 0 8px 8px;
+        }
+      }
+    }
+
+    @include zf.breakpoint(large) {
+      .cell {
+        &:first-child {
+          padding: 0 4px 0 0;
+
+          img {
+            border-radius: 8px 0 0 8px;
+          }
+        }
+
+        &:last-child {
+          padding: 0 0 0 4px;
+
+          img {
+            border-radius: 0 8px 8px 0;
+          }
+        }
+      }
+    }
+  }
+
+  &.collection-size-3 {
+    .cell {
+      padding: 4px 0;
+
+      img {
+        border-radius: 0;
+      }
+
+      &:first-child {
+        padding: 0 0 4px;
+
+        img {
+          border-radius: 8px 8px 0 0;
+        }
+      }
+
+      &:last-child {
+        padding: 4px 0 0;
+
+        img {
+          border-radius: 0 0 8px 8px;
+        }
+      }
+
+      @include zf.breakpoint(medium) {
+        padding: 4px 4px 0 0;
+
+        img {
+          border-radius: 0 0 0 8px;
+        }
+
+        &:last-child {
+          padding: 4px 0 0 4px;
+
+          img {
+            border-radius: 0 0 8px;
+          }
+        }
+      }
+    }
+  }
+
+  &.collection-size-4 {
+    .cell {
+      &:nth-child(even) {
+        padding: 0 0 4px 4px;
+
+        img {
+          border-radius: 0 8px 0 0;
+        }
+      }
+
+      &:nth-child(odd) {
+        padding: 4px 4px 0 0;
+
+        img {
+          border-radius: 0 0 0 8px;
+        }
+      }
+
+      &:first-child {
+        padding: 0 4px 4px 0;
+
+        img {
+          border-radius: 8px 0 0;
+        }
+      }
+
+      &:last-child {
+        padding: 4px 0 0 4px;
+
+        img {
+          border-radius: 0 0 8px;
+        }
+      }
+
+      @include zf.breakpoint(xlarge) {
+        &:nth-child(even) {
+          padding: 4px 4px 0 0;
+
+          img {
+            border-radius: 0 0 0 8px;
+          }
+        }
+
+        &:nth-child(odd) {
+          padding: 4px 4px 0;
+
+          img {
+            border-radius: 0;
+            height: 100%;
+          }
+        }
+
+        &:first-child {
+          padding: 0 0 4px;
+
+          img {
+            border-radius: 8px 8px 0 0;
+          }
+        }
+
+        &:last-child {
+          padding: 4px 0 0 4px;
+
+          img {
+            border-radius: 0 0 8px;
+          }
+        }
+      }
+    }
+  }
+  /* stylelint-enable no-descending-specificity */
+
+  + .collection-tiles-images-captions {
+    margin-bottom: 40px;
+
+    @include zf.breakpoint(large) {
+      margin-bottom: 56px;
+    }
+  }
+}

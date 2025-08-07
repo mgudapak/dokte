@@ -1,0 +1,18 @@
+{{ attach_library('emulsify/main-menu') }}
+
+<nav>
+  <a href="#" id="toggle-expand" class="toggle-expand">
+    <span class="toggle-expand__open">
+      <i class="menu-hamburger fa-solid fa-bars"></i>
+    </span>
+    <span class="toggle-expand__close">
+      <i class="menu-close fa-solid fa-xmark"></i>
+    </span>
+  </a>
+  <div id="main-nav" class="main-nav primary-site-nav">
+    {% include "@molecules/menu/_menu.twig" with {
+      menu_class: "main-menu",
+      header_items: header_menu.menu_items,
+    } %}
+  </div>
+</nav>
