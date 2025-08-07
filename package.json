@@ -49,6 +49,7 @@
     "regenerator-runtime": "^0.13.11",
     "sass": "^1.89.2",
     "sass-loader": "^16.0.5",
+    "slick-carousel": "^1.8.1",
     "storybook": "^7.5.1",
     "stylelint-selector-bem-pattern": "^3.0.1",
     "twig-drupal-filters": "^3.2.0"
