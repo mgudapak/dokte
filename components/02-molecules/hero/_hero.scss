@@ -1,0 +1,157 @@
+@use '../../../node_modules/foundation-sites/scss/foundation' as zf;
+@use '../../00-base/mixins/' as mx;
+@use '../../00-base/colors/colors' as colors;
+
+.hero {
+  position: relative;
+
+  .hero-media {
+    .image {
+      position: relative;
+      z-index: -1;
+      object-fit: cover;
+      height: 500px;
+      width: 100%;
+    }
+
+    &.hero-media--subject-center {
+      // goes dark (bottom) to transparent (top)
+      background: linear-gradient(
+        180deg,
+        rgba(40 40 40 / 20%) 0%,
+        rgba(40 40 40 / 80%) 64%
+      );
+    }
+
+    &.hero-media--subject-left {
+      // goes dark (right) to transparent (left)
+      background: linear-gradient(
+        90deg,
+        rgba(40 40 40 / 20%) 0%,
+        rgba(40 40 40 / 80%) 64%
+      );
+    }
+
+    &.hero-media--subject-right {
+      // goes dark (left) to transparent (right)
+      background: linear-gradient(
+        -90deg,
+        rgba(40 40 40 / 20%) 0%,
+        rgba(40 40 40 / 80%) 64%
+      );
+    }
+  }
+
+  .hero-headline {
+    color: white;
+    margin-top: 0;
+    margin-bottom: 0;
+
+    @include mx.font-sans-bold;
+    @include mx.font-size-32;
+    @include mx.line-height-accessible;
+    @include mx.letter-spacing-half;
+
+    @include zf.breakpoint(medium) {
+      @include mx.font-size-40;
+      @include mx.line-height-default;
+
+      margin-bottom: 1rem;
+    }
+
+    @include zf.breakpoint(large) {
+      max-width: 270px;
+    }
+
+    @include zf.breakpoint(xlarge) {
+      max-width: unset;
+    }
+
+    span {
+      color: colors.$pih-orange;
+    }
+  }
+
+  .hero-sub-headline {
+    color: white;
+
+    @include zf.breakpoint(medium) {
+      max-width: 550px;
+    }
+
+    @include zf.breakpoint(large) {
+      @include mx.font-size-18;
+      @include mx.line-height-default;
+
+      max-width: 570px;
+    }
+
+    @include zf.breakpoint(xlarge) {
+      max-width: 450px;
+    }
+  }
+
+  .hero-text-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding-left: 1em;
+    padding-right: 1em;
+    margin-bottom: 16px;
+    max-width: 1200px; // @TODO: this should be coming from Foundation settings, not hardcoded here!
+
+    @include zf.breakpoint(medium) {
+      margin-bottom: 40px;
+    }
+
+    &.subject-center {
+      .hero-headline {
+        @include zf.breakpoint(medium) {
+          margin-bottom: 1rem;
+        }
+
+        @include zf.breakpoint(large) {
+          max-width: 270px;
+        }
+
+        @include zf.breakpoint(xlarge) {
+          max-width: fit-content;
+          margin-left: auto;
+        }
+      }
+    }
+
+    &.subject-left,
+    &.subject-right {
+      @include zf.breakpoint(medium) {
+        margin-bottom: 24px;
+      }
+
+      @include zf.breakpoint(large) {
+        bottom: 50%;
+        top: 35%;
+      }
+
+      .hero-sub-headline {
+        max-width: 450px;
+      }
+    }
+
+    &.subject-left {
+      @include zf.breakpoint(large) {
+        & {
+          left: 50%;
+        }
+      }
+    }
+
+    &.subject-right {
+      @include zf.breakpoint(large) {
+        & {
+          margin-left: 150px;
+        }
+      }
+    }
+  }
+}

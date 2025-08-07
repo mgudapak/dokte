@@ -1,0 +1,18 @@
+{% set base__class = "breadcrumb" %}
+{% set home = "Home" %}
+{% set delimiter = ">" %}
+{% set crumbs = crumb__data.menuLevels %}
+
+{% block button__content %}
+  <div class="{{ base__class }}">
+    <span class="crumb-home crumb-page">{{ home }}</span>
+    {% for crumb in crumbs %}
+      <span class="crumb-delimiter">{{ delimiter }}</span>
+      {% if loop.last %}
+        <span class="crumb-page-active">{{ crumb }}</span>
+      {% else %}
+        <span class="crumb-page">{{ crumb }}</span>
+      {% endif %}
+    {% endfor %}
+  </div>
+{% endblock %}

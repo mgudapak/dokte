@@ -1,0 +1,38 @@
+@use '../../../../node_modules/foundation-sites/scss/foundation' as zf;
+@use '../../../00-base/defaults/breakpoints' as br;
+@use '../../../00-base/colors/colors' as colors;
+@use '../../../00-base/mixins/' as mx;
+
+.footer-menu {
+  .with-sub {
+    margin-bottom: 2rem;
+
+    @include zf.breakpoint(large) {
+      margin-bottom: 0;
+    }
+
+    h5 {
+      @include mx.font-sans-bold;
+      @include mx.font-size-14;
+
+      text-transform: uppercase;
+      margin-top: 0;
+      margin-bottom: 8px;
+      padding-bottom: 8px;
+      border-bottom: solid 1px #999;
+    }
+  }
+
+  .sub {
+    p {
+      @include mx.font-sans-regular;
+      @include mx.font-size-14;
+
+      text-transform: uppercase;
+      color: inherit;
+      margin-top: 0;
+      margin-bottom: 0;
+      letter-spacing: 0.5px;
+    }
+  }
+}

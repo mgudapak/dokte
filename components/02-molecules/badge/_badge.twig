@@ -1,0 +1,16 @@
+{% block badge %}
+
+  <div class="badge">
+    <p class="badge-type-{{ badge.type }} badge-label">
+      {% if badge.href %}
+          {% include '@atoms/links/_link.twig' with {
+            link_url: badge.href,
+            link_content: badge.label,
+          } %}
+      {% else %}
+        {{ badge.label }}
+      {% endif %}
+    </p>
+  </div>
+
+{% endblock %}

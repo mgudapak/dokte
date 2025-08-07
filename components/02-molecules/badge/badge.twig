@@ -1,0 +1,7 @@
+{% for badge in badges %}
+
+  {% include "@molecules/badge/_badge.twig" with {
+    badge: badge,
+  } %}
+
+{% endfor %}

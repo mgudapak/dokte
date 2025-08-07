@@ -1,0 +1,26 @@
+@use '../../../node_modules/foundation-sites/scss/foundation' as zf;
+@use '../../00-base/mixins/' as mx;
+@use '../../00-base/colors/colors' as colors;
+@use '../../00-base/defaults/variables' as vars;
+
+.breadcrumb {
+  @include mx.font-sans-regular;
+  @include mx.font-size-14;
+  @include mx.line-height-16;
+
+  color: colors.$pih-orange;
+
+  .crumb-page {
+    color: colors.$link-text-color;
+  }
+
+  .crumb-page-active {
+    color: red;
+  }
+
+  .crumb-delimiter {
+    margin-left: vars.$space-8px;
+    margin-right: vars.$space-8px;
+    color: colors.$link-text-color;
+  }
+}

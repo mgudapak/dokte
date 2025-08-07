@@ -1,0 +1,49 @@
+@use '../../../node_modules/foundation-sites/scss/foundation' as zf;
+@use '../../00-base/mixins/' as mx;
+@use '../../00-base/colors/colors' as colors;
+
+.badge {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 32px;
+  padding: 16px;
+  max-width: fit-content;
+  border-radius: 16px;
+  background-color: colors.$gray-100;
+  // margin: 16px;
+
+  // &:first-child {
+  //   margin-left: 0;
+  // }
+
+  @include zf.breakpoint(xlarge) {
+    height: 40px;
+    padding: 16px 24px;
+    border-radius: 24px;
+  }
+}
+
+.badge-label,
+.badge-label .link {
+  @include mx.font-sans-regular;
+  @include mx.font-size-14;
+  @include mx.line-height-20;
+
+  color: colors.$pih-black;
+  text-decoration: none;
+  margin: 0;
+
+  @include zf.breakpoint(medium) {
+    @include mx.font-size-16;
+    @include mx.line-height-24;
+  }
+  @include zf.breakpoint(large) {
+    @include mx.font-size-18;
+    @include mx.line-height-28;
+  }
+  @include zf.breakpoint(xlarge) {
+    @include mx.font-size-24;
+    @include mx.line-height-32;
+  }
+}

@@ -1,0 +1,10 @@
+badges:
+    - type: country
+      label: Rwanda
+      href: /country/rwanda
+    - type: program
+      label: Cancer & Chronic Diseases
+      href: /programs/cancer-chronic-diseases
+    - type: category
+      label: Infrastructure Improvements
+      href: /infrastructure-improvements

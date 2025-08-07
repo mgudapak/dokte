@@ -1,0 +1,105 @@
+{#
+ # Receives hero.yml(as heroData)  and
+ # image.yml(imageData) for its input data
+ #
+ # Available variables:
+ # -
+ #}
+
+{% set hero_base_class = hero_base_class|default('hero') %}
+{% set hero_attributes = hero__attributes|default([]) %}
+{% set hero_extras = hero_extra_classes|default[] %}
+
+{% block hero_banner %}
+  {# {{ attach_library('emulsify/hero-banner') }} #}
+
+  <div {{ bem(hero_base_class, hero_attributes) }}>
+    {% if image_src %}
+      <div {{ bem('hero-media', hero_attributes) }}>
+        {% include "@atoms/images/image/responsive-image.twig" with {
+          image_srcset: image_srcset,
+          image_sizes: image_sizes,
+          image_src: image_src,
+          image_alt: image_alt,
+          image_title: image_title,
+        } %}
+      </div>
+    {% endif %}
+
+    {% if hero__headline %}
+      <div class='hero-text-overlay grid-container {{ hero_attributes }}'>
+
+        <div class="grid-x grid-padding-x align-center align-middle">
+
+          {% if 'subject-left' in hero_attributes or 'subject-right' in hero_attributes %}
+            {# Case - Not Centered #}
+            {# Headline #}
+            <div class="cell">
+
+              <h1 class="hero-headline">
+                {{ hero__headline }}
+              </h1>
+
+            </div>
+
+            {# Sub-Headline #}
+            <div class="cell">
+
+              <p class="hero-sub-headline">
+                {{ hero__subheadline }}
+              </p>
+
+              {# CTA-1 #}
+              <button class="button button--orange">
+                {{ hero__button1_text }}
+              </button>
+
+              {# CTA-2 #}
+              {% if hero__button2_text %}
+                <button class="button">
+                  {{ hero__button2_text }}
+                </button>
+              {% endif %}
+
+              </div>
+
+          {% else %}
+            {# Case - Centered #}
+            {# Headline #}
+            <div class="cell large-3 xlarge-5">
+
+              <h1 class="hero-headline">
+                {{ hero__headline }}
+              </h1>
+
+            </div>
+
+            {# Sub-Headline #}
+            <div class="cell large-5 xlarge-7">
+
+              <p class="hero-sub-headline">
+                {{ hero__subheadline }}
+              </p>
+
+              {# CTA-1 #}
+              <button class="button button--orange">
+                {{ hero__button1_text }}
+              </button>
+
+              {# CTA-2 #}
+              {% if hero__button2_text %}
+                <button class="button">
+                  {{ hero__button2_text }}
+                </button>
+              {% endif %}
+
+              </div>
+          {% endif %}
+
+        </div>
+
+      </div>
+    {% endif %}
+  </div>
+
+{% endblock %}

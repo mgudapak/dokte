@@ -1,0 +1,120 @@
+@use '../../../00-base/defaults/breakpoints' as br;
+@use '../../../00-base/colors/colors' as colors;
+@use '../../../00-base/mixins/' as mx;
+
+/* Menu media */
+// 70 (16 + 38 + 16)
+// 80 (16 + 48 + 16)
+// 72 (16 + 40 + 16)
+$main-menu-medium: br.$medium;
+$top-bar-height: 72px;
+$nav-bar-height: 43px;
+
+/* Nav */
+.primary-site-nav {
+  background-color: colors.$pih-orange;
+}
+
+.main-nav {
+  display: none;
+  width: 250px;
+
+  @include br.large {
+    display: block;
+    width: unset;
+  }
+
+  &--open {
+    position: absolute;
+    right: 0;
+    top: 67px;
+    display: block;
+    // overflow-y: scroll;
+    background-color: colors.$gray-600;
+
+    @include br.large {
+      position: relative;
+      left: auto;
+      right: auto;
+      top: auto;
+      width: auto;
+      overflow-y: visible;
+      background-color: colors.$pih-orange;
+    }
+  }
+}
+
+/* UL */
+.main-menu {
+  @include mx.list-reset;
+
+  position: relative;
+  z-index: 10;
+  // border-bottom: 1px solid;
+
+  @include br.large {
+    border-bottom: none;
+  }
+
+  &__item--sub {
+    border-bottom: solid 1px white;
+    border-bottom-style: dotted;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+}
+
+/*
+ * Sub Navigation
+ */
+
+/* UL (Nested) */
+.main-menu--sub {
+  height: 0;
+  overflow: hidden;
+  width: 100%;
+  border-bottom: none;
+  background-color: rgba(0 0 0 / 25%);
+
+  @include br.large {
+    @include mx.font-size-16;
+
+    position: absolute;
+    left: 0;
+    z-index: 1;
+    display: none;
+    height: auto;
+    overflow: visible;
+    width: max-content;
+    min-width: 200px;
+    background-color: colors.$pih-orange;
+  }
+
+  &:hover {
+    .main-menu__link--sub {
+      @include br.large {
+        color: clr(highlight);
+
+        &.active,
+        &:active,
+        &:hover {
+          background-color: clr(accent-high);
+          color: clr(background);
+        }
+      }
+    }
+  }
+
+  /* See main-menu.js */
+  &-open {
+    height: auto;
+  }
+}
+
+.main-menu--sub-2 {
+  @include br.large {
+    display: none; /* Never shown on large screens */
+  }
+}

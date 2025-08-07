@@ -1,0 +1,74 @@
+@use '../../../00-base/defaults/breakpoints' as br;
+@use '../../../00-base/colors/colors' as colors;
+@use '../../../00-base/mixins/' as mx;
+@use '../../../00-base/defaults/variables' as vars;
+@use '../../../01-atoms/links/link' as link;
+
+/* Toggle */
+.toggle-expand {
+  @include link.link;
+
+  position: absolute;
+  top: 0;
+  display: inline-block;
+  // margin-left: -1rem;
+  // margin-top: -1rem;
+  padding: vars.$space 2rem vars.$space vars.$space;
+  width: 100vw;
+  text-decoration: none;
+
+  /* See main-menu.js */
+  &--open {
+    background-color: clr(accent);
+  }
+
+  // @include medium {
+  @include br.large {
+    display: none;
+  }
+}
+
+.toggle-expand__text {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: bold;
+
+  .toggle-expand--open & {
+    color: clr(background);
+  }
+}
+
+/* SVG icon */
+.toggle-expand__icon {
+  height: vars.$space-48px;
+  width: vars.$space-48px;
+  margin: 0 auto;
+}
+
+.toggle-expand__open {
+  display: inline-block;
+  float: right;
+  text-align: center;
+
+  .toggle-expand--open & {
+    display: none;
+  }
+
+  .menu-hamburger {
+    font-size: xx-large;
+  }
+}
+
+.toggle-expand__close {
+  display: none;
+  float: right;
+  text-align: center;
+
+  .toggle-expand--open & {
+    display: inline-block;
+  }
+
+  .menu-close {
+    font-size: xx-large;
+  }
+}

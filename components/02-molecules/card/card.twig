@@ -1,0 +1,77 @@
+{% set base__class = 'card ' %}
+
+{% if card__variant is defined and card__variant == 'article_teaser' %}
+  {% set card__data = {
+    card__modifiers: ['card__article_teaser'],
+    card__heading: article__data.title,
+    card__subheading: article__data.subheading,
+    card__body: article__data.subheading,
+    card__badges: article__data.badges,
+    card__image__src: article__data.hero_thumbnail,
+    card__image__alt: 'Random Alt Text',
+    card__image__output_image_badge: true,
+    card__url: '#',
+    card__cta__primary__label: '',
+    card__cta__primary__url: '',
+    card__cta__primary__color: [],
+    card__cta__secondary__label: '',
+    card__cta__secondary__url: '',
+    card__cta__secondary__color: []
+  } %}
+{% endif %}
+
+{% block card %}
+  {% set modifiers = card__data['card__modifiers']|join(' ') %}
+
+  <div class="{{ base__class ~ modifiers }}">
+    {# @TODO: eventually use 'image' twig template to generate markup #}
+    <img class="card__image"
+      alt="placeholder alt text"
+      src="{{ card__data['card__image__src'] }}">
+
+    <div class="card-section">
+      <div class="card__header">
+        <h3 class="card__title">{{ card__data['card__heading'] }}</h3>
+        {# for now, our cards do not have a "subtitle" #}
+        {# <h4 class="card__subtitle">{{ card__data['card__subheading'] }}</h4> #}
+      </div>
+
+      <div class="card__body">
+        <p class="card__text">{{ card__data['card__body'] }}</p>
+      </div>
+
+      {% if card__data['card__cta__primary__label'] is not empty or
+        card__data['card__badges'] is not empty %}
+        <div class="card__footer">
+          {# CTAs #}
+          {% if card__data['card__cta__primary__label'] is not empty %}
+            <div class="card__actions">
+              {% include "@atoms/buttons/button.twig" with {
+                label: card__data['card__cta__primary__label'],
+                url: card__data['card__cta__primary__url'],
+                color: card__data['card__cta__primary__color']
+              } %}
+
+              {% if card__data['card__cta__secondary__label'] not empty %}
+                {% include "@atoms/buttons/button.twig" with {
+                  label: card__data['card__cta__secondary__label'],
+                  url: card__data['card__cta__secondary__url'],
+                  color: card__data['card__cta__secondary__color']
+                } %}
+              {% endif %}
+            </div>
+          {% endif %}
+
+          {# badges #}
+          {% if card__data['card__badges'] is not empty %}
+            <div class="card__badges">
+              {% include "@molecules/badge/badge.twig" with {
+                badges: card__data['card__badges'],
+              } %}
+            </div>
+          {% endif %}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+{% endblock %}

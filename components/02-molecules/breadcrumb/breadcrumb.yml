@@ -1,0 +1,3 @@
+breadcrumbs:
+    example1:
+        menuLevels: ['Level 1', 'Level 2', 'Level 3']

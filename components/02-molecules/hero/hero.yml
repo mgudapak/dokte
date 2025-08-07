@@ -1,0 +1,26 @@
+hero_subject_centered:
+    hero__attributes: ['subject-center']
+    hero__headline: 'Injustice <span>has a Cure</span>'
+    hero__subheadline: 'We believe quality health care is a universal human right. Around the world, we fight injustice by providing care first to those who need it most.'
+    hero__button1_text: 'Donate Now'
+    hero__button1_url: '#'
+    hero__button2_text: 'Learn More'
+    hero__button2_url: '#'
+
+hero_subject_to_left:
+    hero__attributes: ['subject-left']
+    hero__headline: 'Injustice <span>has a Cure</span>'
+    hero__subheadline: 'We believe quality health care is a universal human right. Around the world, we fight injustice by providing care first to those who need it most.'
+    hero__button1_text: 'Donate Now'
+    hero__button1_url: '#'
+    hero__button2_text: 'Learn More'
+    hero__button2_url: '#'
+
+hero_subject_to_right:
+    hero__attributes: ['subject-right']
+    hero__headline: 'Injustice <span>has a Cure</span>'
+    hero__subheadline: 'We believe quality health care is a universal human right. Around the world, we fight injustice by providing care first to those who need it most.'
+    hero__button1_text: 'Donate Now'
+    hero__button1_url: '#'
+    hero__button2_text: 'Learn More'
+    hero__button2_url: '#'

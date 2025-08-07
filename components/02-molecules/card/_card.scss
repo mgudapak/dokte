@@ -1,0 +1,179 @@
+@use '../../../node_modules/foundation-sites/scss/foundation' as zf;
+@use '../../00-base/mixins/' as mx;
+@use '../../00-base/colors/colors' as colors;
+
+.card {
+  min-width: 300px;
+  max-width: 450px; // @TODO: Check w/ Maggie - what should be max-width
+  position: relative;
+  border-radius: 16px;
+  color: colors.$pih-black;
+
+  .card-section {
+    padding: 40px;
+  }
+
+  .card__header {
+    margin-bottom: 16px;
+  }
+
+  .card__title {
+    @include mx.font-sans-bold;
+    @include mx.font-size-20;
+    @include mx.line-height-24;
+
+    @include zf.breakpoint(large) {
+      @include mx.font-size-24;
+      @include mx.line-height-32;
+    }
+
+    margin-top: 0;
+    margin-bottom: 0;
+    color: inherit;
+  }
+
+  .card__text {
+    @include mx.font-size-16;
+    @include mx.line-height-22;
+    @include zf.breakpoint(large) {
+      @include mx.font-size-18;
+      @include mx.line-height-28;
+    }
+
+    margin-bottom: 0;
+    color: inherit;
+  }
+
+  &.card__generic {
+    .card__image {
+      border-radius: 16px 16px 0 0;
+    }
+  }
+
+  &.card__bordered {
+    border: solid 1px colors.$gray-400;
+  }
+
+  &.card__statistic {
+    min-width: 368px;
+    max-width: 368px;
+    min-height: 330px;
+    max-height: 330px;
+    padding: 32px 24px;
+    background-color: colors.$orange-400;
+    color: colors.$white;
+    box-shadow:
+      0 2px 5px 0 rgba(0 0 0 / 16%),
+      0 2px 10px 0 rgba(0 0 0 / 12%);
+
+    .card__image {
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 1rem;
+    }
+
+    .card-section {
+      padding: 0;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 240px;
+      text-align: center;
+    }
+
+    .card__header {
+      margin-bottom: 0;
+    }
+
+    .card__title {
+      @include mx.font-serif-bold;
+      @include mx.font-size-40;
+      @include mx.line-height-48;
+
+      color: inherit;
+    }
+  }
+
+  &.card__fullbleed {
+    min-height: 568px;
+    height: 568px;
+    color: colors.$white; // @TODO: consider creating a separate color combos stylesheet
+
+    .card-section {
+      border-radius: 0 0 16px 16px;
+      position: absolute;
+      bottom: -2px; // slight nudge to make it flush w/ bottom of container
+      background: linear-gradient(
+        180deg,
+        rgb(0 0 0 / 30%) 0,
+        rgb(0 0 0 / 80%) 100%
+      );
+    }
+
+    .card__image {
+      width: inherit;
+      height: inherit;
+      flex: 1;
+      object-fit: cover;
+      border-radius: 16px;
+    }
+  }
+
+  .card__footer {
+    cursor: pointer;
+    margin-top: 16px;
+
+    .button {
+      cursor: pointer;
+      margin-right: 16px;
+      margin-bottom: 16px;
+
+      &:last-child {
+        margin-right: 0;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &.card__article_teaser {
+    border: none;
+    background-color: transparent;
+
+    .card__title {
+      @include mx.font-serif-bold;
+      @include mx.font-size-20;
+      @include mx.line-height-24;
+
+      @include zf.breakpoint(medium) {
+        @include mx.font-size-24;
+        @include mx.line-height-32;
+      }
+      @include zf.breakpoint(large) {
+        @include mx.font-size-28;
+        @include mx.line-height-32;
+      }
+      @include zf.breakpoint(xlarge) {
+        @include mx.font-size-32;
+        @include mx.line-height-36;
+      }
+    }
+
+    .card__image {
+      border-radius: inherit;
+      margin-bottom: 16px;
+    }
+
+    .card-section {
+      padding: 0;
+    }
+
+    .card__badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+
+      @include zf.breakpoint(large) {
+        gap: 16px;
+      }
+    }
+  }
+}

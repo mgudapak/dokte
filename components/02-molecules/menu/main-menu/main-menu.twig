@@ -1,0 +1,31 @@
+{{ attach_library('emulsify/main-menu') }}
+
+{# <nav class="menu"> #}
+<nav>
+  <a href="#" id="toggle-expand" class="toggle-expand">
+    <span class="toggle-expand__open">
+      {# {% include "@atoms/images/icons/_icon.twig" with {
+        icon__base_class: "icon",
+        icon__blockname: "toggle-expand",
+        icon__name: "menu",
+      } %} #}
+      {# <span class="toggle-expand__text">Main Menu</span> #}
+      <i class="menu-hamburger fa-solid fa-bars"></i>
+    </span>
+    <span class="toggle-expand__close">
+      {# {% include "@atoms/images/icons/_icon.twig" with {
+        icon__base_class: "icon",
+        icon__blockname: "toggle-expand",
+        icon__name: "menu-close",
+      } %} #}
+      {# <span class="toggle-expand__text">Close</span> #}
+      <i class="menu-close fa-solid fa-xmark"></i>
+    </span>
+  </a>
+  <div id="main-nav" class="main-nav primary-site-nav">
+    {% include "@molecules/menu/_menu.twig" with {
+      menu_class: "main-menu",
+      items: menu.menu_items,
+    } %}
+  </div>
+</nav>

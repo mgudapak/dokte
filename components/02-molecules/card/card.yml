@@ -1,0 +1,213 @@
+card:
+    generic:
+        card__modifiers: ['card__generic', 'card__bordered']
+        card__heading: Regular COVID Testing
+        card__subheading: Subheading for Card 1
+        card__body: Around the world, PIH teams have mobilized to StopCOVID, supporting screening, testing, care, safe quarantine, and social support to fight the pandemic and help communities stay healthy and safe.
+        card__image__src: 'demo/Card-Images-01.jpg'
+        card__image__alt: 'Alt text for an image of width 480px'
+        card__image__output_image_badge: true
+        card__url: '#'
+        card__cta__primary__label: 'Click here'
+        card__cta__primary__url: '#'
+        card__cta__primary__color: []
+        card__cta__secondary__label: 'Click here'
+        card__cta__secondary__url: '#'
+        card__cta__secondary__color: []
+    statistic:
+        card__modifiers: ['card__statistic']
+        card__heading: 30,163
+        card__subheading: Subheading for Card 1
+        card__body: Comprehensive COVID-19 screenings from borders to clinics to homes.
+        card__image__src: 'demo/Card-Stat-Images-01.png'
+        card__image__alt: 'Alt text for an image of width 480px'
+        card__image__output_image_badge: true
+        card__url: '#'
+        card__cta__primary__label: ''
+        card__cta__primary__url: ''
+        card__cta__primary__color: []
+        card__cta__secondary__label: ''
+        card__cta__secondary__url: ''
+        card__cta__secondary__color: []
+    fullbleed:
+        card__modifiers: ['card__fullbleed', 'card__bordered']
+        card__heading: Regular COVID Testing
+        card__subheading: Subheading for Card 1
+        card__body: Around the world, PIH teams have mobilized to StopCOVID, supporting screening, testing, care, safe quarantine, and social support to fight the pandemic and help communities stay healthy and safe.
+        card__image__src: 'demo/Card-Images-02.jpg'
+        card__image__alt: 'Alt text for an image of width 480px'
+        card__image__output_image_badge: true
+        card__url: '#'
+        card__cta__primary__label: 'Click here'
+        card__cta__primary__url: '#'
+        card__cta__primary__color: []
+        card__cta__secondary__label: 'Click here'
+        card__cta__secondary__url: '#'
+        card__cta__secondary__color: []
+
+cards:
+    - card__modifiers: ['card__generic', 'card__bordered']
+      card__heading: Regular COVID Testing 1
+      card__subheading: Subheading for Card 1
+      card__body: Around the world, PIH teams have mobilized to StopCOVID, supporting screening, testing, care, safe quarantine, and social support to fight the pandemic and help communities stay healthy and safe.
+      card__image__src: 'demo/Card-Images-01.jpg'
+      card__image__alt: 'Alt text for an image of width 480px'
+      card__image__output_image_badge: true
+      card__url: '#'
+      card__cta__primary__label: 'Learn More'
+      card__cta__primary__url: '#'
+      card__cta__primary__color: ['orange']
+      card__cta__secondary__label: 'Click here'
+      card__cta__secondary__url: '#'
+      card__cta__secondary__color: ['teal']
+    - card__modifiers: ['card__generic', 'card__bordered']
+      card__heading: Regular COVID Testing 2
+      card__subheading: Subheading for Card 2
+      card__body: Around the world, PIH teams have mobilized to StopCOVID, supporting screening, testing, care, safe quarantine, and social support to fight the pandemic and help communities stay healthy and safe.
+      card__image__src: 'demo/Card-Images-01.jpg'
+      card__image__alt: 'Alt text for an image of width 480px'
+      card__image__output_image_badge: true
+      card__url: '#'
+      card__cta__primary__label: 'Learn More'
+      card__cta__primary__url: '#'
+      card__cta__primary__color: []
+      card__cta__secondary__label: 'Visit Program'
+      card__cta__secondary__url: '#'
+      card__cta__secondary__color: []
+    - card__modifiers: ['card__generic', 'card__bordered']
+      card__heading: Regular COVID Testing 3
+      card__subheading: Subheading for Card 3
+      card__body: Around the world, PIH teams have mobilized to StopCOVID, supporting screening, testing, care, safe quarantine, and social support to fight the pandemic and help communities stay healthy and safe.
+      card__image__src: 'demo/Card-Images-01.jpg'
+      card__image__alt: 'Alt text for an image of width 480px'
+      card__image__output_image_badge: true
+      card__url: '#'
+      card__cta__primary__label: 'Read More'
+      card__cta__primary__url: '#'
+      card__cta__primary__color: []
+      card__cta__secondary__label: 'Click here'
+      card__cta__secondary__url: '#'
+      card__cta__secondary__color: []
+
+statistics:
+    - card__modifiers: ['card__statistic']
+      card__heading: 30,161
+      card__subheading: Subheading for Card 1
+      card__body: Comprehensive COVID-19 screenings from borders to clinics to homes.
+      card__image__src: 'demo/Card-Stat-Images-01.png'
+      card__image__alt: 'Alt text for an image of width 480px'
+      card__image__output_image_badge: true
+      card__url: '#'
+      card__cta__primary__label: ''
+      card__cta__primary__url: ''
+      card__cta__primary__color: []
+      card__cta__secondary__label: ''
+      card__cta__secondary__url: ''
+      card__cta__secondary__color: []
+    - card__modifiers: ['card__statistic']
+      card__heading: 30,162
+      card__subheading: Subheading for Card 1
+      card__body: Comprehensive COVID-19 screenings from borders to clinics to homes.
+      card__image__src: 'demo/Card-Stat-Images-01.png'
+      card__image__alt: 'Alt text for an image of width 480px'
+      card__image__output_image_badge: true
+      card__url: '#'
+      card__cta__primary__label: ''
+      card__cta__primary__url: ''
+      card__cta__primary__color: []
+      card__cta__secondary__label: ''
+      card__cta__secondary__url: ''
+      card__cta__secondary__color: []
+    - card__modifiers: ['card__statistic']
+      card__heading: 30,163
+      card__subheading: Subheading for Card 1
+      card__body: Comprehensive COVID-19 screenings from borders to clinics to homes.
+      card__image__src: 'demo/Card-Stat-Images-01.png'
+      card__image__alt: 'Alt text for an image of width 480px'
+      card__image__output_image_badge: true
+      card__url: '#'
+      card__cta__primary__label: ''
+      card__cta__primary__url: ''
+      card__cta__primary__color: []
+      card__cta__secondary__label: ''
+      card__cta__secondary__url: ''
+      card__cta__secondary__color: []
+
+article-teasers:
+    - card__modifiers: ['card__article-teaser']
+      card__heading: Reprehenderit sunt dolore officia in labore ea anim deserunt
+      card__subheading: Incididunt ipsum aliqua excepteur officia officia excepteur consectetur commodo
+      card__body: Incididunt ipsum aliqua excepteur officia officia excepteur consectetur commodo minim in nulla anim mollit. Duis sint aute cupidatat est in voluptate eiusmod sit culpa ullamco aute. Aliqua non veniam non fugiat. Sunt sit deserunt do non anim. Culpa velit id nulla occaecat nisi esse amet enim labore laborum veniam reprehenderit consectetur sint. Dolor culpa ad esse consectetur non incididunt do sit proident in Lorem occaecat. Occaecat fugiat pariatur culpa eu laboris commodo enim tempor in mollit consequat sit aute laboris.
+      card__image__src: 'demo/Card-Images-01.jpg'
+      card__image__alt: 'Alt text for an image of width 480px'
+      card__image__output_image_badge: true
+      card__url: '#'
+      card__cta__primary__label: 'Learn More'
+      card__cta__primary__url: '#'
+      card__cta__primary__color: ['orange']
+      card__cta__secondary__label: 'Click here'
+      card__cta__secondary__url: '#'
+      card__cta__secondary__color: ['teal']
+
+article:
+    related-articles:
+        related-1:
+            title: 'Mental Health Care Helps Cancer Patient in Kazakhstan Recover'
+            subheading: 'Sania received lifesaving mental health support following her cancer diagnosis through Partners In Health’s Many Voices project'
+            meta-author: PIH - Kazakhstan
+            meta-published: November 12, 2024
+            meta-last-updated: November 16, 2024
+            hero_thumbnail: 'demo/Card-Images-01.jpg'
+            badges:
+                - type: country
+                  label: Rwanda
+                  href: /country/rwanda
+                - type: program
+                  label: Cancer & Chronic Diseases
+                  href: /programs/cancer-chronic-diseases
+                - type: program
+                  label: Social Support
+                  href: /programs/social-support
+                - type: category
+                  label: Infrastructure Improvements
+                  href: /infrastructure-improvements
+        related-2:
+            title: 'A Commitment to Public Health Strengthened Under the Weight of Adversity'
+            subheading: 'Haiti’s Hôpital Universitaire de Mirebalais continues to prioritize patient and staff wellness after armed attack'
+            meta-author: PIH - Haiti
+            meta-published: Jun 27, 2024
+            meta-last-updated: August 5, 2024
+            hero_thumbnail: 'demo/article-embed-3.png'
+            badges:
+                - type: country
+                  label: Rwanda
+                  href: /country/rwanda
+                - type: program
+                  label: Cancer & Chronic Diseases
+                  href: /programs/cancer-chronic-diseases
+                - type: program
+                  label: Social Support
+                  href: /programs/social-support
+                - type: category
+                  label: Infrastructure Improvements
+                  href: /infrastructure-improvements
+        related-3:
+            title: 'Maternal Center of Excellence: The Future of Dignified Care in Sierra Leone'
+            subheading: 'The 166-bed facility will provide high-quality care to women, newborns'
+            meta-author: 'PIH - Sierra Leone'
+            meta-published: May 6, 2024
+            meta-last-updated: May 6, 2024
+            hero_thumbnail: 'demo/article-embed-2.png'
+            badges:
+                - type: country
+                  label: Rwanda
+                  href: /country/rwanda
+                - type: program
+                  label: Cancer & Chronic Diseases
+                  href: /programs/cancer-chronic-diseases
+                - type: program
+                  label: Social Support
+                  href: /programs/social-support
+                - type: category
+                  label: Infrastructure Improvements
+                  href: /infrastructure-improvements
