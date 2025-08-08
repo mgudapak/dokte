@@ -1,0 +1,65 @@
+{
+    "name": "dokte",
+    "homepage": "https://github.com/mgudapak/dokte",
+    "repository": "https://github.com/mgudapak/dokte.git",
+    "structure": [
+        {
+            "name": "base",
+            "description": "Base-level components used in virtually every higher-level component"
+        }
+    ],
+    "variants": [
+        {
+            "platform": "drupal",
+            "structureImplementations": [],
+            "directories": [
+                {
+                    "name": "defaults",
+                    "path": "./components/00-base/defaults",
+                    "destinationPath": "./components/00-base/defaults",
+                    "description": "Contains scss files with global defaults"
+                },
+                {
+                    "name": "mixins",
+                    "path": "./components/00-base/mixins",
+                    "destinationPath": "./components/00-base/mixins",
+                    "description": "Contains useful mixins"
+                },
+                {
+                    "name": "typography",
+                    "path": "./components/00-base/typography",
+                    "destinationPath": "./components/00-base/typography",
+                    "description": "Contains typography system"
+                },
+                {
+                    "name": "templates",
+                    "path": "./templates",
+                    "destinationPath": "./templates",
+                    "description": "Contains Drupal templates"
+                }
+            ],
+            "files": [
+                {
+                    "name": "style",
+                    "path": "./components/style.scss",
+                    "destinationPath": "./components/style.scss",
+                    "description": "Primary style scss file"
+                },
+                {
+                    "name": "base",
+                    "path": "./components/00-base/base.scss",
+                    "destinationPath": "./components/00-base/base.scss",
+                    "description": "Aggregated base file"
+                }
+            ],
+            "components": [
+                {
+                    "name": "colors",
+                    "structure": "base",
+                    "required": true,
+                    "dependency": []
+                }
+            ]
+        }
+    ]
+}
