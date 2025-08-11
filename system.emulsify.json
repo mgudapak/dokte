@@ -6,16 +6,24 @@
         {
             "name": "base",
             "description": "Base-level components used in virtually every higher-level component"
+        },
+        {
+            "name": "atoms",
+            "description": "Small components commonly used in higher-level components"
         }
     ],
     "variants": [
         {
             "platform": "drupal",
             "structureImplementations": [
-				{
-					"name": "base",
-					"directory": "./components/00-base"
-				}
+                {
+                    "name": "base",
+                    "directory": "./components/00-base"
+                },
+                {
+                    "name": "atoms",
+                    "directory": "./components/01-atoms"
+                }
             ],
             "directories": [
                 {
@@ -55,12 +63,72 @@
                     "path": "./components/00-base/base.scss",
                     "destinationPath": "./components/00-base/base.scss",
                     "description": "Aggregated base file"
+                },
+                {
+                    "name": "atoms",
+                    "path": "./components/01-atoms/atoms.scss",
+                    "destinationPath": "./components/01-atoms/atoms.scss",
+                    "description": "Aggregated atoms file"
                 }
             ],
             "components": [
                 {
                     "name": "colors",
                     "structure": "base",
+                    "required": true,
+                    "dependency": []
+                },
+                {
+                    "name": "typography",
+                    "structure": "base",
+                    "required": true,
+                    "dependency": []
+                },
+                {
+                    "name": "buttons",
+                    "structure": "atoms",
+                    "required": true,
+                    "dependency": []
+                },
+                {
+                    "name": "form-fields",
+                    "structure": "atoms",
+                    "required": true,
+                    "dependency": []
+                },
+                {
+                    "name": "images",
+                    "structure": "atoms",
+                    "required": true,
+                    "dependency": []
+                },
+                {
+                    "name": "links",
+                    "structure": "atoms",
+                    "required": true,
+                    "dependency": []
+                },
+                {
+                    "name": "lists",
+                    "structure": "atoms",
+                    "required": true,
+                    "dependency": []
+                },
+                {
+                    "name": "logo",
+                    "structure": "atoms",
+                    "required": true,
+                    "dependency": []
+                },
+                {
+                    "name": "tables",
+                    "structure": "atoms",
+                    "required": true,
+                    "dependency": []
+                },
+                {
+                    "name": "text",
+                    "structure": "atoms",
                     "required": true,
                     "dependency": []
                 }
