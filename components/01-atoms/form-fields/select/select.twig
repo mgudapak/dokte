@@ -6,7 +6,7 @@
       <optgroup label="Whatever">
 {% endif %}
         {% for selection in select %}
-          {% include "@atoms/fields/select/_select-item.twig" with {
+          {% include "@atoms/form-fields/select/_select-item.twig" with {
             select_item: selection.title
           } %}
         {% endfor %}

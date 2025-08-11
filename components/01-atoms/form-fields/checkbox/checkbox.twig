@@ -4,7 +4,7 @@
   <ul class="form-item--checkboxes">
 {% endif %}
   {% for key, checkbox in options %}
-    {% include "@atoms/fields/checkbox/_checkbox-item.twig" with {
+    {% include "@atoms/form-fields/checkbox/_checkbox-item.twig" with {
       checkbox_item: checkbox.title,
       checkbox_item_checked: checkbox.checked,
     } %}
