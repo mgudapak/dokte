@@ -10,6 +10,14 @@
         {
             "name": "atoms",
             "description": "Small components commonly used in higher-level components"
+        },
+        {
+            "name": "molecules",
+            "description": "Medium-sized components used as building blocks within a larger component"
+        },
+        {
+            "name": "organisms",
+            "description": "Large components that compose smaller components into a cohesive UI"
         }
     ],
     "variants": [
@@ -23,6 +31,14 @@
                 {
                     "name": "atoms",
                     "directory": "./components/01-atoms"
+                },
+                {
+                    "name": "molecules",
+                    "directory": "./components/02-molecules"
+                },
+                {
+                    "name": "organisms",
+                    "directory": "./components/03-organisms"
                 }
             ],
             "directories": [
@@ -69,6 +85,18 @@
                     "path": "./components/01-atoms/atoms.scss",
                     "destinationPath": "./components/01-atoms/atoms.scss",
                     "description": "Aggregated atoms file"
+                },
+                {
+                    "name": "molecules",
+                    "path": "./components/02-molecules/molecules.scss",
+                    "destinationPath": "./components/02-molecules/molecules.scss",
+                    "description": "Aggregated molecules file"
+                },
+                {
+                    "name": "organisms",
+                    "path": "./components/03-organisms/organisms.scss",
+                    "destinationPath": "./components/03-organisms/organisms.scss",
+                    "description": "Aggregated organisms file"
                 }
             ],
             "components": [
@@ -131,6 +159,38 @@
                     "structure": "atoms",
                     "required": true,
                     "dependency": []
+                },
+                {
+                    "name": "badge",
+                    "structure": "molecules",
+                    "dependency": ["text", "links"]
+                },
+                {
+                    "name": "breadcrumb",
+                    "structure": "molecules",
+                    "dependency": ["text", "links"]
+                },
+                {
+                    "name": "card",
+                    "structure": "molecules",
+                    "dependency": ["images", "text", "buttons"]
+                },
+                {
+                    "name": "hero",
+                    "structure": "molecules",
+                    "dependency": ["buttons", "text", "images"]
+                },
+                {
+                    "name": "collections",
+                    "structure": "organisms",
+                    "required": true,
+                    "dependency": ["card"]
+                },
+                {
+                    "name": "navigation",
+                    "structure": "organisms",
+                    "required": true,
+                    "dependency": ["text", "links"]
                 }
             ]
         }
