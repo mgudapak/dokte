@@ -10,8 +10,8 @@
 @use './01-atoms/atoms';
 @use './02-molecules/molecules';
 @use './03-organisms/organisms';
-// @use './04-templates/templates';
-// @use './05-pages/pages';
+@use './04-templates/templates';
+@use './05-pages/pages';
 
 // "INCLUDE" only those Foundation classes and styles we plan to use
 // only those included will be compiled into our final CSS

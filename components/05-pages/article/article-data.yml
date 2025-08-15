@@ -1,0 +1,85 @@
+article:
+    heading: 'Butaro Hospital Completes Expansion Project, Becomes Teaching Hospital'
+    subheading: 'The expansion improves care for thousands, secures teaching hospital accreditation'
+    summary:
+    meta-author: PIH - Rwanda
+    meta-published: June 6, 2024
+    meta-last-updated: October 16, 2024
+    language:
+    # share-twitter:
+    # share-facebook:
+    # share-linkedin:
+    # share-email:
+    # share-forward:
+    content:
+    related-badges:
+        programs: ['Cancer & Chronic Diseases', 'Surgery']
+        countries: ['Rwanda']
+        categories:
+            [
+                'Build Systems',
+                'Education',
+                'Infrastructure Improvements',
+                'University of Global Health',
+            ]
+    related-articles:
+        related-1:
+            title: 'Mental Health Care Helps Cancer Patient in Kazakhstan Recover'
+            subheading: 'Sania received lifesaving mental health support following her cancer diagnosis through Partners In Health’s Many Voices project'
+            meta-author: PIH - Kazakhstan
+            meta-published: November 12, 2024
+            meta-last-updated: November 16, 2024
+            hero_thumbnail: 'demo/Card-Images-01.jpg'
+            badges:
+                - type: country
+                  label: Rwanda
+                  href: /country/rwanda
+                - type: program
+                  label: Cancer & Chronic Diseases
+                  href: /programs/cancer-chronic-diseases
+                - type: program
+                  label: Social Support
+                  href: /programs/social-support
+                - type: category
+                  label: Infrastructure Improvements
+                  href: /infrastructure-improvements
+        related-2:
+            title: 'A Commitment to Public Health Strengthened Under the Weight of Adversity'
+            subheading: 'Haiti’s Hôpital Universitaire de Mirebalais continues to prioritize patient and staff wellness after armed attack'
+            meta-author: PIH - Haiti
+            meta-published: Jun 27, 2024
+            meta-last-updated: August 5, 2024
+            hero_thumbnail: 'demo/article-embed-3.png'
+            badges:
+                - type: country
+                  label: Rwanda
+                  href: /country/rwanda
+                - type: program
+                  label: Cancer & Chronic Diseases
+                  href: /programs/cancer-chronic-diseases
+                - type: program
+                  label: Social Support
+                  href: /programs/social-support
+                - type: category
+                  label: Infrastructure Improvements
+                  href: /infrastructure-improvements
+        related-3:
+            title: 'Maternal Center of Excellence: The Future of Dignified Care in Sierra Leone'
+            subheading: 'The 166-bed facility will provide high-quality care to women, newborns'
+            meta-author: 'PIH - Sierra Leone'
+            meta-published: May 6, 2024
+            meta-last-updated: May 6, 2024
+            hero_thumbnail: 'demo/article-embed-2.png'
+            badges:
+                - type: country
+                  label: Rwanda
+                  href: /country/rwanda
+                - type: program
+                  label: Cancer & Chronic Diseases
+                  href: /programs/cancer-chronic-diseases
+                - type: program
+                  label: Social Support
+                  href: /programs/social-support
+                - type: category
+                  label: Infrastructure Improvements
+                  href: /infrastructure-improvements

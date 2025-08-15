@@ -1,0 +1,113 @@
+@use '../../../node_modules/foundation-sites/scss/foundation' as zf;
+@use '../../00-base/colors/colors' as colors;
+@use '../../00-base/mixins/' as mx;
+
+.article {
+  max-width: 968px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 40px;
+
+  @include zf.breakpoint(large) {
+    margin-bottom: 56px;
+  }
+
+  &__hero {
+    margin-bottom: 40px;
+
+    @include zf.breakpoint(large) {
+      margin-bottom: 56px;
+    }
+    @include zf.breakpoint(xlarge) {
+      margin-bottom: 80px;
+    }
+  }
+
+  &__subheading {
+    text-transform: none;
+    color: colors.$gray-500;
+    max-width: 100%;
+
+    @include mx.font-sans-regular;
+    @include mx.font-size-18;
+    @include mx.line-height-24;
+
+    @include zf.breakpoint(medium) {
+      @include mx.font-size-20;
+      @include mx.line-height-28;
+    }
+
+    @include zf.breakpoint(large) {
+      @include mx.font-size-24;
+      @include mx.line-height-32;
+    }
+
+    @include zf.breakpoint(xlarge) {
+      @include mx.font-size-28;
+      @include mx.line-height-36;
+    }
+
+    @include zf.breakpoint(xxlarge) {
+      @include mx.font-size-32;
+      @include mx.line-height-40;
+    }
+  }
+
+  &__body {
+    p:not(.caption) {
+      max-width: inherit;
+    }
+  }
+
+  &__meta {
+    .group-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+
+      @include zf.breakpoint(large) {
+        gap: 16px;
+      }
+    }
+  }
+}
+
+.page-footer {
+  background-color: colors.$gray-500;
+  padding-top: 56px;
+  padding-bottom: 56px;
+
+  .related-articles {
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+
+    .block-title {
+      color: white;
+    }
+
+    .card__article_teaser {
+      color: white;
+      max-width: 968px;
+
+      // invert colors for dark theme
+      .card__badges {
+        .badge {
+          background-color: colors.$gray-600;
+
+          .badge-label .link {
+            color: white;
+          }
+        }
+      }
+    }
+  }
+}
+
+.divider-block {
+  margin-top: 24px;
+  margin-bottom: 40px;
+  height: 1px;
+  width: auto;
+  background-color: colors.$gray-300;
+}

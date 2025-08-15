@@ -1,0 +1,23 @@
+results:
+    - title: Lorem ipsum dolor sit amet consectetur. Quis id et mi scelerisque ante
+      summary: Lorem ipsum dolor sit amet. Aut illum atque vel illum eveniet non sit ipsum praesentium explica.
+      dated: March 8, 2024
+      related-badges:
+          [
+              'Cancer & Chronic Diseases',
+              'Surgery',
+              'Infrastructure Improvements',
+          ]
+    - title: Magna reprehenderit occaecat nostrud quis mollit excepteur.
+      summary: Velit ad eu sit amet nostrud minim sunt officia minim labore in. Minim magna excepteur tempor labore. Qui reprehenderit sint adipisicing cupidatat amet proident aute amet.
+      dated: June 18, 2024
+      related-badges:
+          ['Nursing', 'Cholera', 'Infrastructure Improvements', 'Mexico']
+    - title: Ullamco occaecat incididunt nostrud aliqua nostrud fugiat et esse.
+      summary: Pariatur sunt dolore non ut commodo occaecat. Nulla laborum nulla incididunt eiusmod nostrud dolore nostrud irure incididunt.
+      dated: March 8, 2024
+      related-badges: ['HIV/AIDS']
+    - title: Id ex amet ullamco velit pariatur adipisicing dolor.
+      summary: Culpa consectetur velit commodo tempor proident sint id aliqua quis magna tempor eiusmod ea laborum. Esse non ex cupidatat duis consequat aliquip sint labore incididunt ex.
+      dated: June 18, 2024
+      related-badges: ['Nursing', 'Cholera']

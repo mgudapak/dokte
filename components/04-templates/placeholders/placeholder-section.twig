@@ -1,0 +1,8 @@
+{% set place_holder__base_class = 'placeholder' %}
+{% set place_holder__modifiers = ['section'] %}
+
+<section {{ bem(place_holder__base_class, place_holder__modifiers) }}>
+  <div {{ bem('content', place_holder__modifiers, place_holder__base_class) }}>
+    {{ place_holder_type|default('Placeholder - SECTION'|t) }}
+  </div>
+</section>

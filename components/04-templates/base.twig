@@ -1,0 +1,35 @@
+{% set layout_modifiers = [] %}
+{% set main_base_class = main_base_class|default('main') %}
+{% set main_modifiers = [] %}
+{% set main_content_base_class = main_content_base_class|default('main-content') %}
+{% set main_content_modifiers = [] %}
+
+{# Site Header #}
+{% block site_header %}
+  {# @templates/header.twig #}
+  {% include "@organisms/navigation/header-nav.twig" %}
+{% endblock %}
+
+{# Page #}
+<div {{ bem('grid-container', layout_modifiers) }}>
+  {# Page Header #}
+  {% block page_header %}
+  {% endblock %}
+
+  {# Page Body #}
+  <main role="main">
+    {% block page_content %}
+    {% endblock %}
+  </main>
+</div>
+
+{# Page Footer #}
+<div class="page-footer">
+  {% block page_footer %}
+  {% endblock %}
+</div>
+
+{# Site Footer #}
+{% block site_footer %}
+  {% include "@organisms/navigation/footer-nav.twig" %}
+{% endblock %}

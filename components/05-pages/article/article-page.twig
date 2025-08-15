@@ -1,0 +1,132 @@
+{% extends '@templates/template-full-width.twig' %}
+
+{% block page_content %}
+  <div class="article">
+    <div class="article__header">
+      <h1 class="article__heading">{{ content['heading'] }}</h2>
+      <p class="article__subheading">{{ content['subheading'] }}</p>
+      <div class="article__meta"></div>
+      <div class="article__shares"></div>
+      <div class="article__hero">
+        {% include '@atoms/images/image/responsive-image.twig' with {
+          image_srcset: images.hero['image_srcset'],
+          image_sizes: images.hero['image_sizes'],
+          image_src: images.hero['image_src'],
+          image_alt: images.hero['image_alt'],
+          image_title: images.hero['image_title'],
+          image_caption: images.hero['image_caption'],
+          image_attribution: images.hero['image_attribution'],
+        } %}
+      </div>
+    </div>
+
+    <div class="article__body">
+      <div class="article__content">
+        <p>A new era of patient care has begun at Butaro Hospital.</p>
+
+        <p>After nearly two years of construction and renovation, Butaro Hospital has completed its expansion project, positioning it to offer improved care and services to the over 33,000 patients who seek treatment there each year.</p>
+
+        <p>Dr. Joel M. Mubiligi, Executive Director of Partners In Health in Rwanda and Interim Vice Chancellor of the University of Global Health Equity, shared:</p>
+
+        <h2>This is an Article Section Heading (H2)</h2>
+
+        {% include '@organisms/collections/tiles/tiles.twig' with {
+          images: images.embeds.single,
+        } %}
+
+        <p>The ambitious, multi-year expansion project, which Partners In Health began in December 2021 in partnership with the government, has increased the hospital’s capacity from 150 to 237 beds, doubled the number of surgeries able to be performed, and added a four-story wing, including a radiology suite, an emergency unit, and two admission oncology wards.</p>
+
+        {# A BLOCKQUOTE #}
+        {#
+          this call to block() function does not work - documented bug in Twig 3
+          https://github.com/twigphp/Twig/issues/3321
+
+          {% with { dummyvar: 'YAHOOOOO' } %}
+            {{ block('exampleblock', '@atoms/text/text/blockquote.twig') }}
+          {% endwith %}
+        #}
+        {% include '@atoms/text/text/blockquote.twig' with quote_inline %}
+
+        <h3>This is an Article Section Heading (H3)</h3>
+
+        <p>In the years since, the hospital has expanded its programs and services, working with communities across Burera and providing lifesaving care in a rural district that once had no hospital.</p>
+
+        {% include '@organisms/collections/tiles/tiles.twig' with {
+          images: images.embeds.double,
+        } %}
+
+        <h4>This is an Article Section Heading (H4)</h4>
+        <p>As programs and services have expanded, so too has demand. In 2012, just a year after opening, the hospital served 561 new patients in its oncology ward. By 2019, that number had surged to 1,770, reflecting an increased demand and fueling the need for growth.</p>
+        <p>Lorem ipsum dolor sit amet consectetur. Amet elementum massa gravida tortor sagittis et nibh non sit. Ullamcorper auctor iaculis in lectus. A eu ac adipiscing condimentum tempor turpis tincidunt turpis senectus. Ut vestibulum consequat adipiscing interdum convallis.</p>
+
+        {% include '@organisms/collections/tiles/tiles.twig' with {
+          images: images.embeds.triple,
+        } %}
+
+        <p>Before the expansion, the oncology ward was at 120% capacity and the pediatric ward was at 130% capacity. Crucial services were also unavailable, including a CT scan—needed by more than 75% of cancer patients. As a result, cancer patients had to be transferred to other centers for imaging, costing precious time and money and putting their health at increased risk. The hospital also had no intensive care unit, no oxygen plant, and only one operating room for all types of surgery.</p>
+
+        {% include '@atoms/text/text/blockquote.twig' with quote_pullquote %}
+
+        <p>Now, with the expansion complete, patients can access these services and more, including a newly-renovated cafeteria where free meals will be provided to patients and their families, as part of PIH’s social support program.</p>
+
+        <p>The newly-expanded, teaching-accredited hospital is set to improve patient care for years to come.</p>
+
+        <h3>This is an Article Section Heading (H3)</h3>
+
+        <p>In addition to improving patient care, the expansion has further established Butaro Hospital as a leading medical and scientific institution in the region and has helped it secure teaching hospital accreditation—a milestone that enables the hospital to serve as a fertile training ground for students from the nearby University of Global Health Equity, which PIH founded in 2015 in partnership with the Rwandan Ministry of Health.</p>
+
+        <p>Known locally as {% include '@atoms/links/_link.twig' with {
+          link_url: '#',
+          link_content: 'Inshuti Mu Buzima',
+        } %}, Partners In Health has worked in Rwanda since 2005, strengthening the health system in partnership with the Ministry of Health. Butaro Hospital was built in 2011 through that partnership, along with architectural partner MASS Design.</p>
+
+        {% include '@organisms/collections/tiles/tiles.twig' with {
+          images: images.embeds.quadruple,
+        } %}
+
+        <p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</p>
+      </div>
+    </div>
+
+    <div class="article__footer">
+      <div class="article__meta">
+        {% for key, badges in content['related-badges'] %}
+          <div class="meta__group">
+            <h3 class="group-title">{{ key }}</h3>
+            <div class="group-badges">
+              {% for badge in badges %}
+                {% include "@molecules/badge/badge.twig" with {
+                  badges: {
+                    badge: {
+                      type: key,
+                      label: badge,
+                    },
+                  },
+                } %}
+              {% endfor %}
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+{% endblock %}
+
+{% block page_footer %}
+
+  <div class="grid-container">
+    {# Related or Recommended Articles #}
+    <div class="related-articles">
+      <h2 class="block-title">Recommended Articles</h2>
+      {% for related in content['related-articles'] %}
+        {% include "@molecules/card/card.twig" with {
+          card__variant: 'article_teaser',
+          article__data: related,
+        } %}
+
+        {# @TODO: turn this into a UI element #}
+        <div class="divider-block"></div>
+      {% endfor %}
+    </div>
+  </div>
+{% endblock %}

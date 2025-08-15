@@ -1,0 +1,12 @@
+@use '../../00-base/colors/colors' as colors;
+
+.placeholder {
+  color: colors.$gray-300;
+  border: dashed 4px colors.$gray-200;
+  padding: 3em;
+  text-align: center;
+}
+
+.placeholder--siteheader {
+  border: dashed 1px red;
+}

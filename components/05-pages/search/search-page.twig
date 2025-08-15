@@ -1,0 +1,46 @@
+{% extends '@templates/template-full-width.twig' %}
+
+{% set image_thumbnails = images %}
+
+{% block page_header %}
+  {% include "@templates/placeholders/placeholder.twig" with {
+    place_holder: 'Search Form Controls',
+  } %}
+{% endblock %}
+
+{% block page_content %}
+  <div class="search-results">
+
+      {% for item in results %}
+        <div class="grid-x grid-margin-x search-result">
+          <div class="cell search-result-content small-8">
+            <h3 class="result-title">{{ item.title }}</h3>
+            <p class="result-summary">{{ item.summary|trim|truncate(85, '...') }}</p>
+            <p class="result-dated">{{ item.dated }}</p>
+          </div>
+          <div class="cell search-result-media small-4">
+            {% include '@atoms/images/image/responsive-image.twig' with {
+              image_attributes: image_thumbnails[loop.index0]['image_attributes'],
+              image_srcset: image_thumbnails[loop.index0]['image_srcset'],
+              image_sizes: image_thumbnails[loop.index0]['image_sizes'],
+              image_src: image_thumbnails[loop.index0]['image_src'],
+              image_alt: image_thumbnails[loop.index0]['image_alt'],
+              image_title: image_thumbnails[loop.index0]['image_title'],
+            } %}
+
+          </div>
+          <div class="cell search-result-badges">
+            {% for item in item['related-badges'] %}
+              {% include "@molecules/badge/_badge.twig" with {
+                badge: {
+                  type: '',
+                  label: item,
+                },
+              } %}
+            {% endfor %}
+          </div>
+        </div>
+      {% endfor %}
+
+  </div>
+{% endblock %}

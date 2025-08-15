@@ -1,0 +1,51 @@
+@use '../../../node_modules/foundation-sites/scss/foundation' as zf;
+@use '../../00-base/colors/colors' as colors;
+@use '../../00-base/mixins/' as mx;
+
+.search-results {
+  max-width: 968px;
+  margin-left: auto;
+  margin-right: auto;
+
+  // .cell {
+  //   margin-top: 16px;
+  //   margin-bottom: 16px;
+  // }
+}
+
+.search-result {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  border-bottom: solid 1px colors.$gray-300;
+}
+
+.result-title {
+  @include mx.font-serif-bold;
+
+  text-transform: none;
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.result-summary,
+.result-dated {
+  margin-bottom: 16px;
+}
+
+.result-thumbnail.image {
+  min-height: 120px;
+  width: auto;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.search-result-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+
+  @include zf.breakpoint(large) {
+    gap: 16px;
+  }
+}

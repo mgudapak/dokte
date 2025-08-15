@@ -1,0 +1,29 @@
+{% extends "@templates/base.twig" %}
+
+{% if not header_menu %}
+  {% block site_header %}
+    {% include "@templates/placeholders/placeholder.twig" with {
+      place_holder: 'Site Header',
+    } %}
+  {% endblock %}
+{% endif %}
+
+{% block page_content %}
+  {% include "@templates/placeholders/placeholder.twig" with {
+    place_holder: 'Primary Content',
+  } %}
+{% endblock %}
+
+{% block page_footer %}
+  {% include "@templates/placeholders/placeholder.twig" with {
+    place_holder: 'Page Footer',
+  } %}
+{% endblock %}
+
+{% if not footer_menu %}
+  {% block site_footer %}
+    {% include "@templates/placeholders/placeholder.twig" with {
+      place_holder: 'Site Footer',
+    } %}
+  {% endblock %}
+{% endif %}
