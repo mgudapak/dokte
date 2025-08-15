@@ -1,5 +1,5 @@
 // twig template files for different layouts
-import fullWidthLayoutTwig from './template-full-width.twig';
+import fullWidthLayoutTwig from './layout-full-width.twig';
 
 /**
  * Storybook definition

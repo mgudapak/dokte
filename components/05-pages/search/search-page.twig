@@ -1,9 +1,9 @@
-{% extends '@templates/template-full-width.twig' %}
+{% extends '@templates/layout-full-width.twig' %}
 
 {% set image_thumbnails = images %}
 
 {% block page_header %}
-  {% include "@templates/placeholders/placeholder.twig" with {
+  {% include "@templates/placeholders/placeholders.twig" with {
     place_holder: 'Search Form Controls',
   } %}
 {% endblock %}
