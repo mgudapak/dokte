@@ -1,4 +1,3 @@
-// twig template files for different layouts
 import fullWidthLayoutTwig from './layout-full-width.twig';
 
 /**
