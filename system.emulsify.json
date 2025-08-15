@@ -213,6 +213,11 @@
                     "structure": "organisms",
                     "required": true,
                     "dependency": ["text", "links"]
+                },
+                {
+                    "name": "layouts",
+                    "structure": "templates",
+                    "dependency": ["text"]
                 }
             ]
         }
