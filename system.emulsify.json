@@ -18,6 +18,14 @@
         {
             "name": "organisms",
             "description": "Large components that compose smaller components into a cohesive UI"
+        },
+        {
+            "name": "templates",
+            "description": "Collection of layout templates."
+        },
+        {
+            "name": "pages",
+            "description": "Entire pages built using smaller components"
         }
     ],
     "variants": [
@@ -39,6 +47,14 @@
                 {
                     "name": "organisms",
                     "directory": "./components/03-organisms"
+                },
+                {
+                    "name": "templates",
+                    "directory": "./components/04-templates"
+                },
+                {
+                    "name": "pages",
+                    "directory": "./components/05-pages"
                 }
             ],
             "directories": [
@@ -59,6 +75,18 @@
                     "path": "./components/00-base/typography",
                     "destinationPath": "./components/00-base/typography",
                     "description": "Contains typography system"
+                },
+                {
+                    "name": "template-components",
+                    "path": "./components/04-templates",
+                    "destinationPath": "./components/04-templates",
+                    "description": "Contains default templates and layouts that are required"
+                },
+                {
+                    "name": "page-components",
+                    "path": "./components/05-pages",
+                    "destinationPath": "./components/05-pages",
+                    "description": "Contains sample pages that use above components"
                 }
             ],
             "files": [
@@ -185,6 +213,11 @@
                     "structure": "organisms",
                     "required": true,
                     "dependency": ["text", "links"]
+                },
+                {
+                    "name": "layouts",
+                    "structure": "templates",
+                    "dependency": ["text"]
                 }
             ]
         }
