@@ -59,12 +59,6 @@
                     "path": "./components/00-base/typography",
                     "destinationPath": "./components/00-base/typography",
                     "description": "Contains typography system"
-                },
-                {
-                    "name": "templates",
-                    "path": "./templates",
-                    "destinationPath": "./templates",
-                    "description": "Contains Drupal templates"
                 }
             ],
             "files": [
